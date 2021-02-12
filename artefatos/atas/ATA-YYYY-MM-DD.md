@@ -16,7 +16,7 @@ Estiveram presentes na reunião:
 
 Item | Descrição
 ---- | ----
-Item de Agenda 1 | • Marcar reunião com o cliente <br>• Definir escopo <br>• <br>• <br>• 
+Contato com o cliente | • Marcar reunião com o cliente <br>• Definir escopo <br>• <br>• <br>• 
 Item de Agenda 2 | • <br>• <br>• <br>• <br>• 
 
 ## Notas e Decisões
