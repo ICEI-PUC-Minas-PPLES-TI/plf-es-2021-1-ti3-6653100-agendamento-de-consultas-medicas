@@ -1,6 +1,6 @@
 # Agendamento de Consultas Médicas
 
-Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
+O projeto tem como objetivo criar um sistema de agendamento de consultas médicas para um consultório de endocrinologia. O sistema irá
 
 ## Integrantes
 
