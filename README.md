@@ -1,6 +1,6 @@
 # Agendamento de Consultas Médicas
 
-O projeto tem como objetivo criar um sistema de agendamento de consultas médicas para um consultório de endocrinologia. O sistema irá
+O projeto tem como objetivo criar um sistema de agendamento de consultas médicas para um consultório de endocrinologia.
 
 ## Integrantes
 
