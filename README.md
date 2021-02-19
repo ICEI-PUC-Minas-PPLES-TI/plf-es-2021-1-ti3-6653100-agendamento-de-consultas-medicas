@@ -1,17 +1,17 @@
-# Nome do projeto
+# Agendamento de Consultas Médicas
 
 Escreva um ou dois  parágrafo resumindo o objetivo do seu projeto.
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
+* Isabel Pinheiro Matos
+* Júlia Martins Reis 
+* Rafael Augusto Vieira de Almeida
 
 ## Professor
 
-* Nome completo do professor 1
-* Nome completo do professor 2
+* Eveline Alonso Veloso
+* Hugo Bastos de Paula
 
 ## Instruções de utilização
 
