@@ -23,11 +23,13 @@ O Consultório de Endocrinologia do dr. Rosalvo Reis atualmente utiliza o softwa
 
 ## Descrição Geral da Solução (Escopo)
 
-Pretendemos criar uma aplicação web sincronizada com um banco de dados em nuvem que, além de apresentar as funcionalidades já existentes no "Hi Doctor", consiga sanar as insatisfações apresentadas pelo cliente, citadas acima. O sistema deve possuir cadastro de clientes, agenda e calendário, prontuário médico, prescrição eletrônica, cadastro de diagnóstico de doenças (CID) e relatórios estatísticos.
+Pretendemos criar uma aplicação web sincronizada com um banco de dados em nuvem que, além de apresentar as funcionalidades já existentes no "Hi Doctor", consiga sanar as insatisfações apresentadas pelo cliente, citadas acima. O sistema deve possuir cadastro de clientes, agenda e calendário, prontuário médico, entre outros.
 
 ## Fora do Escopo
 
-
+- Aplicação mobile
+- Manutenção do software
+- 
 
 ## Usuários
 
@@ -37,12 +39,20 @@ Médico e secretária.
 
 | ID | Descrição do Requisito | Prioridade | Complexidade |
 | --- | --- | --- | --- |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
-| | | | |
+|1|Cada usuário deverá possuir seu login e senha| | |
+|2|O usuário poderá gravar e excluir cadastros de pacientes| | |
+|3|O usuário deverá cadastrar para cada paciente seus dados pessoais| | |
+|4|O usuário deverá ter acesso à uma agenda, com todas as consultas em suas respectivas datas e horários| | |
+|5|O usuário deverá marcar consultas na agenda do sistema| | |
+|6|O usuário poderá desmarcar consultas na agenda do sistema| | |
+|7|O usuário poderá remarcar consultas na agenda do sistema| | |
+|8|O usuário deverá ter acesso à lista de pacientes| | |
+|9|O usuário deverá conseguir localizar pacientes por meio de busca por nome, sobrenome, cidade, telefone, entre outros.| | |
+|10|O usuário deverá cadastrar prontuários de pacientes| | |
+|10|O usuário poderá modificar prontuários já cadastrados| | |
+|11|O usuário deverá ter acesso ao prontuário de cada paciente| | |
+|12|O usuário deverá ter acesso ao perfil de cada paciente com seus dados pessoais| | |
+|13|O usuário deverá cadastrar pedidos de exame| | |
 | | | | |
 | | | | |
 
@@ -50,7 +60,7 @@ Médico e secretária.
 
 | ID | Descrição do Requisito | Prioridade | Complexidade |
 | --- | --- | --- | --- |
-| | | | |
+|1|O sistema deverá ser integrado com banco de dados para garantir sincronização automática dos dados| | |
 | | | | |
 | | | | |
 | | | | |
