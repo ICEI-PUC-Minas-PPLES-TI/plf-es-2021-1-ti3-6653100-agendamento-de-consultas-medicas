@@ -54,8 +54,7 @@ Médico e secretária.
 |11|O usuário deverá ter acesso ao prontuário de cada paciente| média | média |
 |12|O usuário deverá ter acesso ao perfil de cada paciente com seus dados pessoais| alta | média |
 |13|O usuário deverá cadastrar pedidos de exame| alta | média |
-| | | | |
-| | | | |
+
 
 ## Requisitos Não Funcionais
 
