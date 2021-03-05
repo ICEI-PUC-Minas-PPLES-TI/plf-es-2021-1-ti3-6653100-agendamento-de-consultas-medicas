@@ -42,18 +42,18 @@ Médico e secretária.
 | --- | --- | --- | --- |
 |1|Cada usuário deverá possuir seu login e senha| alta | baixa |
 |2|O usuário poderá cadastrar pacientes| alta | média |
-|3|O usuário poderá excluir cadastros de pacientes| média | média |
-|4|O usuário deverá ter acesso à uma agenda, com todas as consultas em suas respectivas datas e horários| alta | média |
-|5|O usuário deverá marcar consultas na agenda do sistema| alta | alta |
-|6|O usuário poderá desmarcar consultas na agenda do sistema| média | média |
-|7|O usuário poderá remarcar consultas na agenda do sistema| média | média |
-|8|O usuário deverá ter acesso à lista de pacientes| alta | baixa |
-|9|O usuário deverá conseguir localizar pacientes por meio de busca por nome, sobrenome, cidade, telefone, entre outros.| alta | alta |
-|10|O usuário deverá cadastrar prontuários de pacientes| alta | média |
-|10|O usuário poderá modificar prontuários já cadastrados| média | média |
-|11|O usuário deverá ter acesso ao prontuário de cada paciente| média | média |
-|12|O usuário deverá ter acesso ao perfil de cada paciente com seus dados pessoais| alta | média |
-|13|O usuário deverá cadastrar pedidos de exame| alta | média |
+|3|O usuário deverá marcar consultas na agenda do sistema| alta | alta |
+|4|O usuário deverá ter acesso à lista de pacientes| alta | baixa |
+|5|O usuário deverá conseguir localizar pacientes por meio de busca por nome, sobrenome, cidade, telefone, entre outros.| alta | alta |
+|6|O usuário deverá cadastrar prontuários de pacientes| alta | média |
+|7|O usuário deverá ter acesso ao perfil de cada paciente com seus dados pessoais| alta | média |
+|8|O usuário deverá cadastrar pedidos de exame| alta | média |
+|9|O usuário deverá ter acesso à uma agenda, com todas as consultas em suas respectivas datas e horários| alta | média |
+|10|O usuário poderá excluir cadastros de pacientes| média | média |
+|11|O usuário poderá desmarcar consultas na agenda do sistema| média | média |
+|12|O usuário poderá remarcar consultas na agenda do sistema| média | média |
+|13|O usuário poderá modificar prontuários já cadastrados| média | média |
+|14|O usuário deverá ter acesso ao prontuário de cada paciente| média | média |
 
 
 ## Requisitos Não Funcionais
@@ -61,9 +61,10 @@ Médico e secretária.
 | ID | Descrição do Requisito | Prioridade | Complexidade |
 | --- | --- | --- | --- |
 |1|O sistema deverá ser integrado com banco de dados para garantir sincronização automática dos dados| alta | alta |
-|2|Para cadastrar um cliente deve-se gastar no máximo 3 cliques| baixa | baixa |
+|2|O sistema deve suportar dois usuários logados simultâneamente | alta | média |
 |3|O sistema deve atualizar a lista de pacientes após um cadastro em, no máximo, dois segundos| média | baixa |
-|4|O sistema deve suportar dois usuários logados simultâneamente | alta | média |
+|4|Para cadastrar um cliente deve-se gastar no máximo 3 cliques| baixa | baixa |
+
 
 ## Técnica(s) de Elicitação Utilizada(s)
 
