@@ -1,7 +1,8 @@
 # Lista das Atas de Reuniões
 
 * ATA-2021-02-12.md - Ata de abertura do projeto.
-* ATA-YYYY-MM-DD.md - Ata de distribuição das tarefas da Sprint 1.
-* ATA-YYYY-MM-DD.md - Ata de Visita ao cliente.
+* ATA-2021-02-19.md - Ata de definição de tarefas pré reunião com o cliente.
+* ATA-2021-02-24.md - Ata de reunião com o cliente.
+* ATA-2021-03-04.md - Ata de continuação do documento de visão.
 
 
