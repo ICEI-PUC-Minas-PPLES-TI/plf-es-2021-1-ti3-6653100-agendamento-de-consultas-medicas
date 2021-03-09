@@ -5,7 +5,8 @@
 ## Autores
 - Isabel Pinheiro Matos
 - Júlia Martins Reis
-- Rafael Augusto Vieira de Almeida
+- Luiz Henrique de Jesus Ramos
+- Rafael Augusto Vieira de Almeida 
 
 ## Fornecedor(es) de Requisitos
 
