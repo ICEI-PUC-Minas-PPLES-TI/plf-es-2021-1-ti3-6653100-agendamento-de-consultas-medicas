@@ -2,7 +2,7 @@
 
 ## 1. Leiaute sugerido
 
-![Leiaute da tela de home](leiaute/Desktop - 01.jpg)
+![Desktop - 1](https://user-images.githubusercontent.com/65324450/110862312-18f3b300-829e-11eb-82ff-107c7978a853.jpg)
 
 ## 2. Relacionamentos com outras interfaces
 
