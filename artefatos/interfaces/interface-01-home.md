@@ -2,7 +2,7 @@
 
 ## 1. Leiaute sugerido
 
-![Leiaute da tela de home](leiaute/Desktop - 1.jpg "Leiaute d tela de home.")
+![Leiaute da tela de home](leiaute/Desktop - 01.jpg)
 
 ## 2. Relacionamentos com outras interfaces
 
