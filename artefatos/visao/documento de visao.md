@@ -43,7 +43,7 @@ Médico e secretária.
 | --- | --- | --- | --- |
 |1|Cada usuário deverá possuir seu login e senha| alta | baixa |
 |2|Os dois usuários poderão cadastrar pacientes| alta | média |
-|3|Os dois usuários deverão marcar consultas na agenda do sistema| alta | alta |
+|3|Os dois usuários poderão marcar consultas na agenda do sistema| alta | alta |
 |4|Os dois usuários deverão ter acesso à lista de pacientes| alta | baixa |
 |5|Os dois usuários deverão conseguir localizar pacientes por meio de busca por nome, sobrenome, cidade, telefone, entre outros.| alta | alta |
 |6|O médico deverá cadastrar prontuários de pacientes| alta | média |
