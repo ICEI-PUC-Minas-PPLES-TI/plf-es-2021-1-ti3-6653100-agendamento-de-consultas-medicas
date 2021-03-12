@@ -61,7 +61,7 @@ Médico e secretária.
 
 | ID | Descrição do Requisito | Prioridade | Complexidade |
 | --- | --- | --- | --- |
-|1|O sistema deverá ser integrado com banco de dados para garantir sincronização automática dos dados| alta | alta |
+|1|O sistema deverá ser integrado com banco de dados em nuvem para garantir sincronização automática dos dados| alta | alta |
 |2|O sistema deve suportar dois usuários logados simultâneamente | alta | média |
 |3|O sistema deve atualizar a lista de pacientes após um cadastro em, no máximo, dois segundos| média | baixa |
 |4|Para cadastrar um cliente deve-se gastar no máximo 3 cliques| baixa | baixa |
