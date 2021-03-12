@@ -42,19 +42,19 @@ Médico e secretária.
 | ID | Descrição do Requisito | Prioridade | Complexidade |
 | --- | --- | --- | --- |
 |1|Cada usuário deverá possuir seu login e senha| alta | baixa |
-|2|O usuário poderá cadastrar pacientes| alta | média |
-|3|O usuário deverá marcar consultas na agenda do sistema| alta | alta |
-|4|O usuário deverá ter acesso à lista de pacientes| alta | baixa |
-|5|O usuário deverá conseguir localizar pacientes por meio de busca por nome, sobrenome, cidade, telefone, entre outros.| alta | alta |
-|6|O usuário deverá cadastrar prontuários de pacientes| alta | média |
-|7|O usuário deverá ter acesso ao perfil de cada paciente com seus dados pessoais| alta | média |
-|8|O usuário deverá cadastrar pedidos de exame| alta | média |
-|9|O usuário deverá ter acesso à uma agenda, com todas as consultas em suas respectivas datas e horários| alta | média |
-|10|O usuário poderá excluir cadastros de pacientes| média | média |
-|11|O usuário poderá desmarcar consultas na agenda do sistema| média | média |
-|12|O usuário poderá remarcar consultas na agenda do sistema| média | média |
-|13|O usuário poderá modificar prontuários já cadastrados| média | média |
-|14|O usuário deverá ter acesso ao prontuário de cada paciente| média | média |
+|2|Os dois usuários poderão cadastrar pacientes| alta | média |
+|3|Os dois usuários deverão marcar consultas na agenda do sistema| alta | alta |
+|4|Os dois usuários deverão ter acesso à lista de pacientes| alta | baixa |
+|5|Os dois usuários deverão conseguir localizar pacientes por meio de busca por nome, sobrenome, cidade, telefone, entre outros.| alta | alta |
+|6|O médico deverá cadastrar prontuários de pacientes| alta | média |
+|7|Os dois usuários deverão ter acesso ao perfil de cada paciente com seus dados pessoais| alta | média |
+|8|O médico deverá cadastrar pedidos de exame| alta | média |
+|9|Os dois usuários deverão ter acesso à uma agenda, com todas as consultas em suas respectivas datas e horários| alta | média |
+|10|Os dois usuários poderão excluir cadastros de pacientes| média | média |
+|11|Os dois usuários poderão desmarcar consultas na agenda do sistema| média | média |
+|12|Os dois usuários poderão remarcar consultas na agenda do sistema| média | média |
+|13|O médico poderá modificar prontuários já cadastrados| média | média |
+|14|O médico deverá ter acesso ao prontuário de cada paciente| média | média |
 
 
 ## Requisitos Não Funcionais
