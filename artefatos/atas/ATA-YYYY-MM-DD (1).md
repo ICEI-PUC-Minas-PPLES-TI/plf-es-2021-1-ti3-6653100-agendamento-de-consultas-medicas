@@ -1,0 +1,40 @@
+# Ata de Reunião Semanal - Nome do Projeto
+
+## Informações
+**Data/hora:** 12/03, 18:00  
+**Local:** Teams 
+**Motivo da reunião:** Finalização wireframes e preenchimento doc. de visão
+**Secretário:** Rafael Augusto Vieira De Almeida  
+
+## Participantes
+Estiveram presentes na reunião:
+- Rafael Augusto Vieira De Almeida
+- Júlia Martins Reis
+- Isabel Pinheiro Matos
+- Luiz Henrique
+
+## Pauta
+
+Item | Descrição
+---- | ----
+Wireframes | • Finalização das telas de Homepage e Login• <br>•
+Documento De Visão | • Finalização do documento de visão• <br>• 
+
+## Notas e Decisões
+Item | Quem | Anotações |
+---- | ---- | ---- |
+Finalização do documento de visão | Equipe | Concluido |
+Finalização dos wireframes | Equipe | Concluido
+
+
+## Ações e pendências
+| Feito (S/N)? | Item | Responsável | Data para solução |
+| ---- | ---- | ---- | ---- |
+| | Elaborar o projects da Sprint 1 | Rafael | 11/03/2021 |
+| |Apresentar Trabalho | Equipe | 12/03/2021 |
+| | Planejar inicio da codificação | Equipe | 11/03/2021 |
+| | ATA de reunião com o cliente | Júlia | 11/03/2021 |
+
+## Outras notas e informações
+N/A
+
