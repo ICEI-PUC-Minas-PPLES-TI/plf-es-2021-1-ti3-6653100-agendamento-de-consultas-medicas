@@ -10,7 +10,7 @@
 
 | **Número** | **Nome** | **Descrição** | **Valores válidos** | **Formato** | **Tipo** | **Restrições** |
 | --- | --- | --- | --- | --- | --- | --- |
-|1. | | | | | | |
+|1. |Filtro de busca | | | | | |
 |2. | | | | | | |
 |3. | | | | | | |
 |4. | | | | | | |
