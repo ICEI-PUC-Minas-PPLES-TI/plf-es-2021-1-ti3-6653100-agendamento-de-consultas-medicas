@@ -2,7 +2,7 @@
 
 ## 1. Leiaute sugerido
 
-![Desktop - 2](https://user-images.githubusercontent.com/65324450/110863325-47be5900-829f-11eb-8f6e-ef79ef78bc54.jpg)
+![Desktop - 2 (1)](https://user-images.githubusercontent.com/58401291/111384904-cdb81680-8688-11eb-9d3b-d848bb36ada8.jpg)
 
 ## 2. Relacionamentos com outras interfaces
 
