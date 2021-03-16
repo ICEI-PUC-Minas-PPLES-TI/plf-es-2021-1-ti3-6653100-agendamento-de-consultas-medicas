@@ -2,7 +2,7 @@
 
 ## 1. Leiaute sugerido
 
-![Leiaute da tela de login](leiaute/iu-num-leiaute.jpg "Leiaute d tela de login.")
+![Tela de busca de pacientes](https://user-images.githubusercontent.com/69217117/111385632-de1cc100-8689-11eb-8745-90593396c732.jpg)
 
 ## 2. Relacionamentos com outras interfaces
 
