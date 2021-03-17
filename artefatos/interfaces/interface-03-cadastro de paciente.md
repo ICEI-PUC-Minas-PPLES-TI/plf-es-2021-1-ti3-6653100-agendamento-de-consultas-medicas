@@ -17,31 +17,31 @@ O usuário terá acesso a outras interfaces por meio da home:
 
 | **Número** | **Nome** | **Descrição** | **Valores válidos** | **Formato** | **Tipo** | **Restrições** |
 | --- | --- | --- | --- | --- | --- | --- |
-|1. |Nome||||||
-|2. |Imagem||||||
+|1. |Nome|Nome do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|2. |Imagem|Foto do paciente|imagem|jpg, jpeg, png|botão|Não permite upload de outros tipos de arquivo|
 |3. |Prontuário||||||
 |4. |Leito||||||
-|5. |Data de cadastro||||||
-|6. |Nascimento||||||
+|5. |Data de cadastro|Data que cadastro do paciente foi feito|Números e barras|String|Caixa de texto|Não pode deixar vazio|
+|6. |Nascimento|Data de nascimento do paciente|Números e barras|String|Caixa de texto|Não pode deixar vazio|
 |7. |Inativo||||||
-|8. |Convênio||||||
-|9. |Sexo||||||
-|10. |Estado Civil||||||
-|11. |Cor||||||
-|12. |Naturalidade||||||
+|8. |Convênio|Convênio do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
+|9. |Sexo|Sexo do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
+|10. |Estado Civil|Estado civil do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
+|11. |Cor|Cor do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
+|12. |Naturalidade|Naturalidade do paciente|Letras|String|Caixa de texto|-|
 |13. |Grau de instrução||||||
-|14. |CPF||||||
-|15. |Titular do CPF||||||
-|16. |Profissão||||||
-|17. |Email para envio de informações médicas||||||
-|18. |Logradouro||||||
-|19. |Complemento||||||
-|20. |Bairro||||||
-|21. |Cidade||||||
-|22. |UF||||||
-|23. |CEP||||||
-|24. |Telefone||||||
-|25. |Observações||||||
+|14. |CPF|CPF do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
+|15. |Titular do CPF|Titular do CPF|Letras|String|Caixa de texto|-|
+|16. |Profissão|Profissão do paciente|Letras|String|Caixa de texto|-|
+|17. |Email para envio de informações médicas|Email do paciente|letras, números e caracteres especiais|String|Caixa de texto|Não pode deixar vazio|
+|18. |Logradouro|Logradouro do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|19. |Complemento|Complemento do paciente|Números|String|Caixa de texto|Deve ser preenchido apenas se for apartamento|
+|20. |Bairro|Bairro do Paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|21. |Cidade|Cidade do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|22. |UF|UF do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|23. |CEP|CEP do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
+|24. |Telefone|Telefone de contato do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
+|25. |Observações|Observações|Letras|String|Caixa de texto|-|
 
 ## 4. Comandos
 
