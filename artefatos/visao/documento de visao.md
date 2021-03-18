@@ -68,4 +68,4 @@ Médico e secretária.
 
 
 ## Técnica(s) de Elicitação Utilizada(s)
-A técnica de elicitação utilizada foi a entrevista com o cliente, na qual debatemos sobre as preferências para o sistema e as insatisfações com o software atual utilizado.
+A técnica de elicitação utilizada foi a entrevista com o cliente, na qual debatemos sobre as preferências para o sistema e as insatisfações com o software atual utilizado. Outra técnica foi a partir da análise do software que é utilizado pelo médico.
