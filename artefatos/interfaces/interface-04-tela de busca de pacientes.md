@@ -10,16 +10,9 @@
 
 | **Número** | **Nome** | **Descrição** | **Valores válidos** | **Formato** | **Tipo** | **Restrições** |
 | --- | --- | --- | --- | --- | --- | --- |
-|1. |Filtro de busca | | | | | |
+|1. | Filtro de busca | Pesquisar por pacientes | Letras e números | String | Caixa de texto e botão | Só permite uma busca por vez |
 |2. | | | | | | |
-|3. | | | | | | |
-|4. | | | | | | |
-|5. | | | | | | |
-|6. | | | | | | |
-|7. | | | | | | |
-|8. | | | | | | |
-|9. | | | | | | |
-|10. | | | | | | |
+
 
 ## 4. Comandos
 
