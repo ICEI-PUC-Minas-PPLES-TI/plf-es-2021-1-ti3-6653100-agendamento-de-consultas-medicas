@@ -17,8 +17,8 @@ O usuário terá acesso a outras interfaces por meio da tela de busca:
 | **Número** | **Nome** | **Descrição** | **Valores válidos** | **Formato** | **Tipo** | **Restrições** |
 | --- | --- | --- | --- | --- | --- | --- |
 |1. | Filtro de busca | Determinar forma de busca | Uma das opções da caixa de seleção | Caixa de seleção | Caixa de seleção | Só permite uma busca por vez |
-|2. | Busca | Buscar pacientes | Letras e números | String | Caixa de texto | - |
-
+|2. | Busca | Chave de busca | Letras e números | String | Caixa de texto | - |
+|3. | Lista | Resultado da busca | - | Lista de itens | Lista | - |
 
 ## 4. Comandos
 
