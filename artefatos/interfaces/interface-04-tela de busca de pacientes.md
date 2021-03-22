@@ -2,7 +2,7 @@
 
 ## 1. Leiaute sugerido
 
-![Tela de busca de pacientes](https://user-images.githubusercontent.com/69217117/111713658-d77b7e80-882e-11eb-97ae-677e703dbea5.jpg)
+![Tela de busca de pacientes](https://user-images.githubusercontent.com/69217117/112061241-f5055c80-8b3c-11eb-8e3b-8143e4aadbde.jpg)
 
 ## 2. Relacionamentos com outras interfaces
 O usuário terá acesso a outras interfaces por meio da tela de busca:
