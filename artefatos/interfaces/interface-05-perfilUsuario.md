@@ -21,6 +21,28 @@ O usuário terá acesso a outras interfaces por meio da tela:
 
 | **Número** | **Nome** | **Descrição** | **Valores válidos** | **Formato** | **Tipo** | **Restrições** |
 | --- | --- | --- | --- | --- | --- | --- |
+|1. |Nome|Nome do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|2. |Imagem|Foto do paciente|imagem|jpg, jpeg, png|botão|Não permite upload de outros tipos de arquivo|
+|3. |Prontuário|Número do prontuário|números|Inteiro|Caixa de texto|Número não pode se repetir|
+|5. |Data de cadastro|Data que cadastro do paciente foi feito|Números e barras|String|Caixa de texto|Não pode deixar vazio|
+|6. |Nascimento|Data de nascimento do paciente|Números e barras|String|Caixa de texto|Não pode deixar vazio|
+|8. |Convênio|Convênio do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
+|9. |Sexo|Sexo do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
+|10. |Estado Civil|Estado civil do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
+|11. |Cor|Cor do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
+|12. |Naturalidade|Naturalidade do paciente|Letras|String|Caixa de texto|-|
+|14. |CPF|CPF do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
+|15. |Titular do CPF|Titular do CPF|Letras|String|Caixa de texto|-|
+|16. |Profissão|Profissão do paciente|Letras|String|Caixa de texto|-|
+|17. |Email para envio de informações médicas|Email do paciente|letras, números e caracteres especiais|String|Caixa de texto|Não pode deixar vazio|
+|18. |Logradouro|Logradouro do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|19. |Complemento|Complemento do paciente|Números|String|Caixa de texto|Deve ser preenchido apenas se for apartamento|
+|20. |Bairro|Bairro do Paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|21. |Cidade|Cidade do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|22. |UF|UF do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|23. |CEP|CEP do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
+|24. |Telefone|Telefone de contato do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
+|25. |Observações|Observações|Letras|String|Caixa de texto|-|
 
 ## 4. Comandos
 
