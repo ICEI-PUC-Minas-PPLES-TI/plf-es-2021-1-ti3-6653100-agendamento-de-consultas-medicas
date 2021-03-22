@@ -11,6 +11,7 @@ O usuário terá acesso a outras interfaces por meio da tela de busca:
   - Ao clicar no botão Logout, ele será redirecionado à página de login;
   - Ao clicar no botão Novo Paciente, ele será direcionado ao formulário de cadastro de novo paciente;
   - Ao clicar no botão Dados, tendo um paciente selecionado, ele terá acesso aos dados daquele paciente; 
+  - Ao clicar no item da lista, ele será direcionado ao perfil do paciente.
   
 ## 3. Campos
 
@@ -18,12 +19,13 @@ O usuário terá acesso a outras interfaces por meio da tela de busca:
 | --- | --- | --- | --- | --- | --- | --- |
 |1. | Filtro de busca | Determinar forma de busca | Uma das opções da caixa de seleção | Caixa de seleção | Caixa de seleção | Só permite uma busca por vez |
 |2. | Busca | Chave de busca | Letras e números | String | Caixa de texto | - |
-|3. | Lista | Resultado da busca | - | Lista de itens | Lista | - |
+|3. | Lista  | Resultado da busca | - | Lista de itens | Lista de itens| - |
 
 ## 4. Comandos
 
 | **Número** | **Nome** | **Ação** | **Restrições** |
 | --- | --- | --- | --- |
-|1. |Nome do paciente na lista | Direciona o usuário ao perfil do paciente | - |
+|1. |Clicar no item da lista | Direciona o usuário ao perfil do paciente | - |
+
 
 
