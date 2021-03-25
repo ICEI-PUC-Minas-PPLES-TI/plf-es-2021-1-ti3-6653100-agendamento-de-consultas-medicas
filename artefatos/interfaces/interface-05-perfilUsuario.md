@@ -2,7 +2,7 @@
 
 ## 1. Leiaute sugerido
 
-![Perfil do paciente](https://user-images.githubusercontent.com/65324450/111715814-6f7b6700-8833-11eb-9b01-34029f3aa392.jpg)
+![Perfil do paciente](https://user-images.githubusercontent.com/69217117/112547145-211d1980-8d99-11eb-882d-4e8e24e465d2.jpg)
 
 ## 2. Relacionamentos com outras interfaces
 
@@ -12,7 +12,8 @@ O usuário terá acesso a outras interfaces por meio da tela:
 - Ao clicar no botão Logout, ele será redirecionado à página de login;
 - Ao clicar no botão Dados, ele terá acesso aos dados daquele paciente; 
 - Ao clicar no botão Anamneses, ele será direcionado à tela com a ficha médica do paciente;
-- Ao clicar no botão Exames e receitas, ele terá acesso aos pedidos de exame e receitas daquele paciente;
+- Ao clicar no botão Exames, ele terá acesso aos pedidos de exame daquele paciente;
+- Ao clicar no botão Receitas, ele terá acesso às receitas médicas daquele paciente;
 
 ## 3. Campos
 
@@ -48,4 +49,6 @@ O usuário terá acesso a outras interfaces por meio da tela:
 |1. |Editar|Permite edição do cadastro do paciente|-|
 |2. |Excluir|Exclui cadastro do paciente|-|
 |3. |Anamneses| Direcionar usuário à ficha médica do paciente |-|
-|4. |Exames e receitas| Pedidos de exame e receitas do médico para cada paciente |-|
+|4. |Exames | Pedidos de exame e receitas do médico para cada paciente |-|
+|4. |Receitas| Receitas do médico para cada paciente |-|
+
