@@ -12,10 +12,7 @@ O usuário terá acesso a outras interfaces por meio da tela:
 - Ao clicar no botão Logout, ele será redirecionado à página de login;
 - Ao clicar no botão Dados, ele terá acesso aos dados daquele paciente; 
 - Ao clicar no botão Anamneses, ele será direcionado à tela com a ficha médica do paciente;
-- Ao clicar no botão Consultas e retornos, ele terá acesso ao histórico das consultas do paciente e às datas de retorno;
-- Ao clicar no botão Textos do paciente, ele terá acesso às observações sobre cada paciente;
-- Ao clicar no botão Forms, ele terá acesso aos formulários do paciente;
-- Ao clicar no botão Guias, ele terá acesso ao guias das receitas do paciente;
+- Ao clicar no botão Exames e receitas, ele terá acesso aos pedidos de exame e receitas daquele paciente;
 
 ## 3. Campos
 
@@ -51,7 +48,4 @@ O usuário terá acesso a outras interfaces por meio da tela:
 |1. |Editar|Permite edição do cadastro do paciente|-|
 |2. |Excluir|Exclui cadastro do paciente|-|
 |3. |Anamneses| Direcionar usuário à ficha médica do paciente |-|
-|4. |Consultas e retornos| Apresenta histórico das consultas do paciente e as datas de retorno |-|
-|5. |Textos do paciente| Observações do médico sobre cada paciente |-|
-|6. |Forms| Formulários do paciente |-|
-|7. |Guias| Guias das receitas |-|
+|4. |Exames e receitas| Pedidos de exame e receitas do médico para cada paciente |-|
