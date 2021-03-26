@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express()
+const bcrypt = require('bcryptjs')
 
 const bodyParser = require("body-parser"); //traduzir dados enviados em uma estrutura js
 const connection = require("./database/database");
@@ -18,10 +19,6 @@ connection
 
 app.get("/", (req, res) => {
     res.render("index")
-})
-
-app.get("/home", (req, res) => {
-    res.render("home")
 })
 
 app.set('view engine', 'ejs')
@@ -43,8 +40,12 @@ app.post("/", (req, res) => {
 
         if(usuario != undefined){
 
-            if(usuario.senha == senha){
-                res.redirect("/home")
+            var correct = bcrypt.compareSync(senha, usuario.senha)
+
+            if(correct){
+                res.render("home", {
+                    usuario: usuario
+                });
             }
             else{
                 res.redirect("/");
