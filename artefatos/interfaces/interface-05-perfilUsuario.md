@@ -49,6 +49,6 @@ O usuário terá acesso a outras interfaces por meio da tela:
 |1. |Editar|Permite edição do cadastro do paciente|-|
 |2. |Excluir|Exclui cadastro do paciente|-|
 |3. |Anamneses| Direcionar usuário à ficha médica do paciente |-|
-|4. |Exames | Pedidos de exame e receitas do médico para cada paciente |-|
+|4. |Exames | Pedidos de exames do médico para cada paciente |-|
 |5. |Receitas| Receitas do médico para cada paciente |-|
 
