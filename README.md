@@ -6,6 +6,7 @@ O projeto tem como objetivo criar um sistema de agendamento de consultas médica
 
 * Isabel Pinheiro Matos
 * Júlia Martins Reis 
+* Luiz Henrique de Jesus Ramos
 * Rafael Augusto Vieira de Almeida
 
 ## Professor
