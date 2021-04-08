@@ -2,7 +2,7 @@
 
 ## 1. Leiaute sugerido
 
-![Leiaute da tela de login](leiaute/iu-num-leiaute.jpg "Leiaute d tela de login.")
+![WhatsApp Image 2021-04-08 at 18 50 10](https://user-images.githubusercontent.com/65324450/114101132-ade8cc80-989b-11eb-9671-8cac01aca1a0.jpeg)
 
 ## 2. Relacionamentos com outras interfaces
 
