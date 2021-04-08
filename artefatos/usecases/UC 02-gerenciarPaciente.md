@@ -45,3 +45,17 @@ Usuário (Médico ou Secretária)
 4. O usuário clica no botão editar do menu lateral;
 5. O usuário altera os dados que precisam ser modificados;
 6. O usuário clica em salvar e salva as alterações.
+
+### 5.3 Fluxo alternativo Exclusão do cadastro de paciente 
+
+**Precondições**  
+1. Usuário deve estar logado na plataforma;
+2. O paciente a ser excluído já deve ter sido cadastrado;
+
+**Passos**        
+1. O caso de uso se inicia na quando o usuário está na página Pacientes, após ter efetuado a busca;
+2. O usuário clica no item (resultado da busca) que corresponde ao paciente cujos dados ele quer acessar;
+3. O usuário será direcionado à pagina de perfil do paciente;
+4. O usuário clica no botão excluir do menu lateral;
+5. O usuário confirma a exclusão do paciente.
+
