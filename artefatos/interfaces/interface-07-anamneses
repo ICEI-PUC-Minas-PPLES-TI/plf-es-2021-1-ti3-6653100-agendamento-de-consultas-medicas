@@ -19,29 +19,14 @@ O usuário terá acesso a outras interfaces por meio da tela:
 
 | **Número** | **Nome** | **Descrição** | **Valores válidos** | **Formato** | **Tipo** | **Restrições** |
 | --- | --- | --- | --- | --- | --- | --- |
-|1. | | | | | | |
-|2. | | | | | | |
-|3. | | | | | | |
-|4. | | | | | | |
-|5. | | | | | | |
-|6. | | | | | | |
-|7. | | | | | | |
-|8. | | | | | | |
-|9. | | | | | | |
-|10. | | | | | | |
+|1. | Nome do paciente| nome do paciente | letras| String|Caixa de texto| - |
+|2. | Texto de anamneses| anamneses do paciente | letras , números e caracteres especiais| String | Caixa de Texto | - |
+
 
 ## 4. Comandos
 
 | **Número** | **Nome** | **Ação** | **Restrições** |
 | --- | --- | --- | --- |
-|1. | | | |
-|2. | | | |
-|3. | | | |
-|4. | | | |
-|5. | | | |
-|6. | | | |
-|7. | | | |
-|8. | | | |
-|9. | | | |
-|10. | | | |
+|1. | Salvar| Salvar a alteração da anamnese | - |
+
 
