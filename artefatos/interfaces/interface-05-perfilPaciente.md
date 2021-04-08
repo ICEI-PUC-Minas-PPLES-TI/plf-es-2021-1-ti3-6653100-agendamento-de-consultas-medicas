@@ -1,4 +1,4 @@
-# Interface de usuário 05 - Perfil do usuário
+# Interface de usuário 05 - Perfil do paciente
 
 ## 1. Leiaute sugerido
 
