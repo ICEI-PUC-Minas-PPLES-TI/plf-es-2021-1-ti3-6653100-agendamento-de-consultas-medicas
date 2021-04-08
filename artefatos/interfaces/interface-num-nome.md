@@ -2,9 +2,18 @@
 
 ## 1. Leiaute sugerido
 
-![Leiaute da tela de login](leiaute/iu-num-leiaute.jpg "Leiaute d tela de login.")
+![WhatsApp Image 2021-04-08 at 18 57 37](https://user-images.githubusercontent.com/65324450/114101773-96f6aa00-989c-11eb-85e4-84367850fbf4.jpeg)
 
 ## 2. Relacionamentos com outras interfaces
+
+O usuário terá acesso a outras interfaces por meio da tela:
+
+1. Ao clicar no botão Agenda, ele terá acesso à página da agenda, com suas consultas;
+2. Ao clicar no botão Pacientes, ele será direcionado à página com a lista de pacientes e a busca;
+3. Ao clicar no botão Logout, ele será redirecionado à página de login;
+4. Ao clicar no botão Dados, ele terá acesso aos dados daquele paciente;
+5. Ao clicar no botão Exames, ele terá acesso aos pedidos de exame daquele paciente;
+6. Ao clicar no botão Receitas, ele terá acesso às receitas médicas daquele paciente;
 
 ## 3. Campos
 
