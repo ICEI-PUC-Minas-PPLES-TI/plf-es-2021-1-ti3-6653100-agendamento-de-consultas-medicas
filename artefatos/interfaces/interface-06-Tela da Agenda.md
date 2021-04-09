@@ -31,7 +31,7 @@ O usuário terá acesso a outras interfaces por meio da home:
 | --- | --- | --- | --- |
 |1. |Gravar | Grava a consulta do paciente na agenda | - |
 |2. |Novo | Abre novo formulário vazio para preenchimento de nova consulta | - |
-|3. |Remarcar | Deletar informações do horário atual para marcar novo horário | - |
+|3. |Remarcar | Deleta informações do horário atual para marcar novo horário | - |
 |4. |Desmarcar| Deleta dados da consulta marcada | - |
 |5. |Botao de busca| Busca o nome do paciente| - |
 
