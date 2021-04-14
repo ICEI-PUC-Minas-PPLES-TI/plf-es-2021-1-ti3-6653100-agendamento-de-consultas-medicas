@@ -2,7 +2,8 @@
 
 ## 1. Leiaute sugerido
 
-![WhatsApp Image 2021-04-08 at 18 57 37](https://user-images.githubusercontent.com/65324450/114102399-9ca0bf80-989d-11eb-970c-97f0c5996940.jpeg)
+![Perfil do paciente (4)](https://user-images.githubusercontent.com/58401291/114781361-f21e1600-9d4e-11eb-87fa-415ebaee2cf5.jpg)
+
 
 ## 2. Relacionamentos com outras interfaces
 
