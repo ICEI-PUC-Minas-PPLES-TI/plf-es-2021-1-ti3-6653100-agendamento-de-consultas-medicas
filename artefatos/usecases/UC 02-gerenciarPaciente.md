@@ -11,51 +11,39 @@ Usuário (Médico ou Secretária)
 ## 3. Precondições
 
 	1. Usuário deve estar logado na plataforma
- 
+	2. O paciente a ser visualizado já deve ter sido cadastrado;
+
 ## 4. Fluxo principal
 
-    1.O caso de uso se inicia quando o usuário clica no botão Novo Paciente no menu lateral;
-	2. O usuário preenche os campos do formulário com os dados do paciente;
-	3. O usuário clica em salvar;
-	4. O usuário é direcionado para a página de perfil do paciente que acabou de ser cadastrado.
+    1.O caso de uso se inicia quando o usuário clica no botão Pacientes;
+	2. O usuário escolhe o filtro de busca;
+	3. O usuário digita a chave de busca desejada;
+	4. O usuário seleciona o paciente em questão;
+	5. O usuário é direcionado à página de perfil do paciente que contém todos os seus dados.
 
 ## 5. Fluxos alternativos
 
-### 5.1 Fluxo alternativo Visualização do perfil do paciente
-
-**Precondições**  
-1. Usuário deve estar logado na plataforma; 
-2. O paciente a ser visualizado já deve ter sido cadastrado;
-
-**Passos**        
-1. O caso de uso se inicia na quando o usuário está na página Pacientes, após ter efetuado a busca;
-2. O usuário clica no item (resultado da busca) que corresponde ao paciente cujos dados ele quer acessar;
-3. O usuário será direcionado à pagina de perfil do paciente que contém todos os seus dados.
-
-### 5.2 Fluxo alternativo Edição dos dados do paciente
+### 5.1 Fluxo alternativo Cadastro de novo paciente: começa a partir da etapa 1
 
 **Precondições**  
 1. Usuário deve estar logado na plataforma;
-2. O paciente a ser editado já deve ter sido cadastrado;
+
+**Passos** 
+1. O caso de uso se inicia quando o usuário clica no botão Novo Paciente no menu lateral;
+2. O usuário preenche os campos do formulário com os dados do paciente;
+3. O usuário clica em salvar;
+4. O usuário é direcionado para a página de perfil do paciente que acabou de ser cadastrado.
+
+### 5.2 Fluxo alternativo Edição dos dados do paciente: começa a partir da etapa 6
 
 **Passos**        
-1. O caso de uso se inicia na quando o usuário está na página Pacientes, após ter efetuado a busca;
-2. O usuário clica no item (resultado da busca) que corresponde ao paciente cujos dados ele quer acessar;
-3. O usuário será direcionado à pagina de perfil do paciente;
-4. O usuário clica no botão editar do menu lateral;
-5. O usuário altera os dados que precisam ser modificados;
-6. O usuário clica em salvar e salva as alterações.
+1. O usuário clica no botão editar do menu lateral;
+2. O usuário altera os dados que precisam ser modificados;
+3. O usuário clica em salvar e salva as alterações.
 
-### 5.3 Fluxo alternativo Exclusão do cadastro de paciente 
-
-**Precondições**  
-1. Usuário deve estar logado na plataforma;
-2. O paciente a ser excluído já deve ter sido cadastrado;
+### 5.3 Fluxo alternativo Exclusão do cadastro de paciente: começa a partir da etapa 6
 
 **Passos**        
-1. O caso de uso se inicia na quando o usuário está na página Pacientes, após ter efetuado a busca;
-2. O usuário clica no item (resultado da busca) que corresponde ao paciente cujos dados ele quer acessar;
-3. O usuário será direcionado à pagina de perfil do paciente;
-4. O usuário clica no botão excluir do menu lateral;
-5. O usuário confirma a exclusão do paciente.
+1. O usuário clica no botão excluir do menu lateral;
+2. O usuário confirma a exclusão do paciente.
 
