@@ -25,6 +25,7 @@ O usuário terá acesso a outras interfaces por meio da home:
 |8. |Atendido |Mostra a hora que o paciente foi atendido |Números |Inteiro | Caixa de texto|Não pode ser vazio |
 |9. |Notas |Campo para digitar notas relacionadas ao paciente |Letras |String |Caixa de texto | - |
 
+
 ## 4. Comandos
 
 | **Número** | **Nome** | **Ação** | **Restrições** |
@@ -34,6 +35,8 @@ O usuário terá acesso a outras interfaces por meio da home:
 |3. |Remarcar | Deleta informações do horário atual para marcar novo horário | - |
 |4. |Desmarcar| Deleta dados da consulta marcada | - |
 |5. |Botao de busca| Busca o nome do paciente| - |
+|6. |Datas no calendário| Abre agenda do dia com as informações das consultas | - |
+|7. |Item descrição da consulta na agenda| Abre os dados referentes à consulta | - |
 
 
 
