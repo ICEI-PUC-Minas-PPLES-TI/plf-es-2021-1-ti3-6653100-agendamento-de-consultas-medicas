@@ -326,7 +326,7 @@ top: 250px;
   font-family: Roboto;
   padding: 400px 400px;
   font-size: 23px;
-  top: 180px;
+  top: 188px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
@@ -373,7 +373,7 @@ top: 250px;
 
 .field{
   position: relative;
-  padding: 15px;
+  padding: 17px;
   bottom: -40px;
   margin-right: 174px;
   border: 1px solid black;
