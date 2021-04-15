@@ -326,7 +326,7 @@ top: 250px;
   font-family: Roboto;
   padding: 400px 400px;
   font-size: 23px;
-  top: 130px;
+  top: 180px;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   border-left: 1px solid black;
@@ -359,4 +359,32 @@ top: 250px;
   bottom: 600px;
   right: 390px;
   font-size: 23px;
+}
+
+.pesquisar{
+  position: relative;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+}
+
+.field{
+  position: relative;
+  padding: 15px;
+  bottom: -40px;
+  margin-right: 174px;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+
+.enviar{
+  position: relative;
+  margin-right: 890px;
+  
+  right: -763px;
+  top: 20px
+  
 }
