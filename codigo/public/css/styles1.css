@@ -228,80 +228,16 @@ top: 250px;
   bottom: 0px;
 }
 
-.opcao1{
+.opcao{
+  margin: 10px;
   position: absolute;
   width: 150px;
   height: 56px;
-  left: 30px;
-  top: 250px;
+  left: 25px;
+  top: 210px;
   
   font-family: roboto;
   font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 56px;
-  
-  color: #000000;
-}
-
-.opcao2{
-  position: absolute;
-  width: 150px;
-  height: 56px;
-  left: 30px;
-  top: 350px;
-  
-  font-family: roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 56px;
-  
-  color: #000000;
-}
-
-.opcao3{
-  position: absolute;
-  width: 150px;
-  height: 56px;
-  left: 30px;
-  top: 450px;
-  
-  font-family: roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 56px;
-  
-  color: #000000;
-}
-
-.opcao4{
-  position: absolute;
-  width: 150px;
-  height: 56px;
-  left: 30px;
-  top: 550px;
-  
-  font-family: roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 56px;
-  
-  color: #000000;
-}
-
-.opcao5{
-  position: absolute;
-  width: 150px;
-  height: 56px;
-  left: 30px;
-  top: 650px;
-  
-  font-family: roboto;
-  font-style: normal;
-  font-weight: bold;
   font-size: 20px;
   line-height: 56px;
   

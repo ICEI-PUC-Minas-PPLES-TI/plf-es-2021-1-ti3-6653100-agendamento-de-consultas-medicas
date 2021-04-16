@@ -56,7 +56,6 @@ const Paciente = connection.define('paciente', {
     },
     complemento:{
         type: Sequelize.STRING,
-        allowNull: false
     },
     bairro:{
         type: Sequelize.TEXT,

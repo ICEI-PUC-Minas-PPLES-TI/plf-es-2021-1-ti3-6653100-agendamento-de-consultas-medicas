@@ -54,11 +54,13 @@
             </div>
         <div class="container">
             <ul>
-                <li><a href="#"><div class="opcao1">opcao1</div></a></li>
-                <li><a href="#"><div class="opcao2">opcao2</div></a></li>
-                <li><a href="#"><div class="opcao3">opcao3</div></a></li>
-                <li><a href="#"><div class="opcao4">opcao4</div></a></li>
-                <li><a href="#"><div class="opcao5">opcao5</div></a></li>
+                <% pacientes.forEach(paciente => {%>
+                    <li>
+                        <br>
+                        <a class="opcao" href="/pacientes/perfil/<%= paciente.id %>"><%= paciente.nome %></a>
+                        <br>
+                    </li>
+                <% }); %>
             </ul>
         </div>
       
