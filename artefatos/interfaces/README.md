@@ -8,4 +8,4 @@
 * interface-06-Tela da agenda.md - Tela do agendamento online.
 * interface-07-AnamnesesPaciente.md - Tela das anamneses do paciente.
 * interface-08-Exames.md - Tela dos exames do paciente.
-* interface-07-Receitas.md - Tela das receitas do paciente.
+* interface-09-Receitas.md - Tela das receitas do paciente.
