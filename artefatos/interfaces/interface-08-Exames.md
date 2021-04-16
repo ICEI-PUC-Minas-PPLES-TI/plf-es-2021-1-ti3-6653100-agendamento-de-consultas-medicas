@@ -1,8 +1,8 @@
-# Interface de usuário NUM - NOME DA INTERFACE
+# Interface de usuário 08 - Exames do paciente
 
 ## 1. Leiaute sugerido
 
-![Leiaute da tela de login](leiaute/iu-num-leiaute.jpg "Leiaute d tela de login.")
+![Exames](https://user-images.githubusercontent.com/65324450/115034786-44238080-9ea2-11eb-8960-9a908b57d9f3.jpeg)
 
 ## 2. Relacionamentos com outras interfaces
 
