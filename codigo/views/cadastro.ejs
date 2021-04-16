@@ -4,187 +4,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/views/index.css">
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css">
 </head>
 
 <body>
 
-    <div class="container">
-        <form method="POST" action="/salvarPaciente">
-            <div class="row">
+    <div class="engloba">
 
-                <div class="col-md-10">
+        <div class="main-header">
+            MainHeader
+        </div>
 
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="inputName">Nome</label>
-                            <input type="text " class="form-control" id="inputName " placeholder="" name="nome">
+        <div class="aside">
+
+            <div class="logo">
+                <img src="../images/Dr 2.png" alt="">
+
+                <ul>
+                    <a href="">Agenda</a>
+                    <a href="">Pacientes</a>
+                    <a href="">Novo Paciente</a>
+                    <a href="">Dados</a>
+                </ul>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="content">
+            <div class="conteudo">
+                <div class="row">
+
+                    <div class="col-md-10">
+
+                        <form method="POST" action="/salvarPaciente" class="row">
+                            <div class="col-12">
+                                <label for="inputName ">Nome</label>
+                                <input type="text " class="form-control " id="inputName " placeholder="">
+                            </div>
+                        </form>
+
+
+                        <form class="row ">
+
+
+                            <div class="col-4 ">
+                                <label for="prontuario ">Prontruario</label>
+                                <input type="text " class="form-control " id="prontuario " placeholder=" ">
+                            </div>
+                            <div class="col-4">
+                                <label for="DataCadastro ">Cadastro</label>
+                                <input type="text " class="form-control " id="DataCadastro " placeholder=" ">
+                            </div>
+                            <div class="col-4 ">
+                                <label for="Nascimento ">Nascimento</label>
+                                <input type="text " class="form-control " id="Nascimento " placeholder=" ">
+                            </div>
+
+                        </form>
+
+                        <div class="form-row ">
+                            <div class="col ">
+                                <label for="inputState ">Convenio</label>
+                                <select id="inputState " class="form-control ">
+                                  <option selected>Unimed</option>
+                                  <option>Vitalis</option>
+                                  <option>Unimed</option>
+                                </select>
+                            </div>
+                            <div class="col ">
+                                <label for="inputState ">Sexo</label>
+                                <select id="inputState " class="form-control ">
+                                  <option selected>Masculino</option>
+                                  <option>Masculino</option>
+                                  <option>Feminino</option>
+                                </select>
+                            </div>
+
                         </div>
+
+                    </div>
+                    <div class="col-md-2 " style="background-color:white; border: 1px solid black; "></div>
+
+
+
+                </div>
+
+
+
+                <form class="row pt-1">
+
+
+                    <div class="col-4 ">
+                        <label for="inputState ">Estado Civil</label>
+                        <select id="inputState " class="form-control ">
+                          <option selected>Solteiro</option>
+                          <option>Casado</option>
+                          <option>Solteiro</option>
+                        </select>
+                    </div>
+                    <div class="col-4">
+                        <label for="inputState">Cor</label>
+                        <select id="inputState " class="form-control ">
+                          <option selected>Branco</option>
+                          <option>Branco</option>
+                          <option>Negro</option>
+                          <option>Pardo</option>
+                          <option>Amarelo</option>
+                        </select>
+                    </div>
+                    <div class="col-4 ">
+                        <label for="Naturalidade ">Naturalidade</label>
+                        <input type="text " class="form-control " id="Naturalidade" placeholder=" ">
+                    </div>
+
+                </form>
+
+                <form class="row pt-1">
+
+
+                    <div class="col-4 ">
+                        <label for="cpf ">CPF</label>
+                        <input type="text " class="form-control " id="cpf" placeholder=" ">
+                    </div>
+                    <div class="col-4">
+                        <label for="inputState ">Titular do CPF</label>
+                        <select id="inputState " class="form-control ">
+                          <option selected></option>
+                          <option></option>
+                          <option></option>
+                        </select>
+                    </div>
+                    <div class="col-4 ">
+                        <label for="profissao">Profissao</label>
+                        <input type="text " class="form-control " id="profissao " placeholder=" ">
+                    </div>
+
+                </form>
+
+                <form class="row pt-1">
+                    <div class="col-12">
+                        <label for="email ">Email para envio de informacoes medicas</label>
+                        <input type="text " class="form-control " id="email " placeholder="">
+                    </div>
+                </form>
+
+                <form class="row ">
+
+
+                    <div class="col-8 ">
+                        <label for="Logradouro ">Logradouro</label>
+                        <input type="text " class="form-control " id="Logradouro " placeholder=" ">
+                    </div>
+                    <div class="col-4">
+                        <label for="Complemento ">Complemento</label>
+                        <input type="text " class="form-control " id="Complemento " placeholder=" ">
                     </div>
 
 
-                    <div class="row ">
+                </form>
 
-                        <div class="col-4 ">
-                            <label for="prontuario ">Prontuario</label>
-                            <input type="text" class="form-control" id="prontuario" placeholder="" name="prontuario">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="row">
+                            <div class="container">
+                                <form class="row ">
+
+
+                                    <div class="col-6 ">
+                                        <label for="Bairro ">Bairro</label>
+                                        <input type="text " class="form-control " id="Bairro " placeholder=" ">
+                                    </div>
+                                    <div class="col-6">
+                                        <label for="Cidade ">Cidade</label>
+                                        <input type="text " class="form-control " id="Cidade " placeholder=" ">
+                                    </div>
+
+
+                                </form>
+                            </div>
                         </div>
-                        <div class="col-4">
-                            <label for="DataCadastro ">Data de Cadastro</label>
-                            <input type="text" class="form-control" id="DataCadastro" placeholder="" name="dataCadastro">
-                        </div>
-                        <div class="col-4 ">
-                            <label for="Nascimento ">Data de Nascimento</label>
-                            <input type="text" class="form-control" id="Nascimento" placeholder="" name="nascimento">
-                        </div>
-
-                    </div>
-
-                    <div class="form-row ">
-                        <div class="col ">
-                            <label for="inputState ">Convenio</label>
-                            <select id="inputState " class="form-control" name="convenio">
-                            <option selected>Unimed</option>
-                            <option>Vitalis</option>
-                            <option>Unimed</option>
-                            </select>
-                        </div>
-                        <div class="col ">
-                            <label for="inputState ">Sexo</label>
-                            <select id="inputState " class="form-control " name="sexo">
-                            <option selected>Masculino</option>
-                            <option>Masculino</option>
-                            <option>Feminino</option>
-                            </select>
-                        </div>
-
-                    </div>
-
-                </div>
-                <div class="col-md-2 " style="background-color:white; border: 1px solid black; "></div>
-
-            </div>
-
-            <div class="row pt-1">
+                        <div class="row">
+                            <div class="container">
+                                <form class="row ">
 
 
-                <div class="col-4 ">
-                    <label for="inputState ">Estado Civil</label>
-                    <select id="inputState " class="form-control " name="estadoCivil">
-                    <option selected>Solteiro</option>
-                    <option>Casado</option>
-                    <option>Solteiro</option>
-                    </select>
-                </div>
-                <div class="col-4">
-                    <label for="inputState">Cor</label>
-                    <select id="inputState " class="form-control " name="cor">
-                    <option selected>Branco</option>
-                    <option>Branco</option>
-                    <option>Negro</option>
-                    <option>Pardo</option>
-                    <option>Amarelo</option>
-                    </select>
-                </div>
-                <div class="col-4 ">
-                    <label for="Naturalidade ">Naturalidade</label>
-                    <input type="text " class="form-control " id="Naturalidade" placeholder=" " name="naturalidade">
-                </div>
-
-            </div>
-
-            <div class="row pt-1">
+                                    <div class="col-2 ">
+                                        <label for="uf ">UF</label>
+                                        <input type="text " class="form-control " id="uf " placeholder=" ">
+                                    </div>
+                                    <div class="col-5">
+                                        <label for="Cep ">CEP</label>
+                                        <input type="text " class="form-control " id="Cep " placeholder=" ">
+                                    </div>
+                                    <div class="col-5">
+                                        <label for="Telefone ">Telefone</label>
+                                        <input type="text " class="form-control " id="Telefone " placeholder=" ">
+                                    </div>
 
 
-                <div class="col-6">
-                    <label for="cpf ">CPF</label>
-                    <input type="text " class="form-control " id="cpf" placeholder=" " name="cpf">
-                </div>
-                
-                <div class="col-6">
-                    <label for="profissao">Profissao</label>
-                    <input type="text " class="form-control " id="profissao " placeholder=" " name="profissao">
-                </div>
-
-            </div>
-
-            <div class="row pt-1">
-                <div class="col-12">
-                    <label for="email ">Email para envio de informacoes medicas</label>
-                    <input type="text " class="form-control " id="email " placeholder="" name="email">
-                </div>
-            </div>
-
-            <div class="row ">
-
-                <div class="col-8 ">
-                    <label for="Logradouro ">Logradouro</label>
-                    <input type="text " class="form-control " id="Logradouro " placeholder=" " name="logradouro">
-                </div>
-                <div class="col-4">
-                    <label for="Complemento ">Complemento</label>
-                    <input type="text " class="form-control " id="Complemento " placeholder=" " name="complemento">
-                </div>
-
-
-            </div>
-
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="row">
-                        <div class="container">
-                            <div class="row ">
-
-                                <div class="col-6 ">
-                                    <label for="Bairro ">Bairro</label>
-                                    <input type="text " class="form-control " id="Bairro " placeholder=" " name="bairro">
-                                </div>
-                                <div class="col-6">
-                                    <label for="Cidade ">Cidade</label>
-                                    <input type="text " class="form-control " id="Cidade " placeholder=" " name="cidade">
-                                </div>
-
+                                </form>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="container">
-                            <div class="row ">
-
-
-                                <div class="col-2 ">
-                                    <label for="uf ">UF</label>
-                                    <input type="text " class="form-control " id="uf " placeholder=" " name="uf">
-                                </div>
-                                <div class="col-5">
-                                    <label for="Cep ">CEP</label>
-                                    <input type="text " class="form-control " id="Cep " placeholder=" " name="cep">
-                                </div>
-                                <div class="col-5">
-                                    <label for="Telefone ">Telefone</label>
-                                    <input type="text " class="form-control " id="Telefone " placeholder=" " name="telefone">
-                                </div>
-
-
-                            </div>
+                    <form>
+                        <div class="form-group class">
+                            <label for="exampleFormControlTextarea1 pt-2">Observacoes</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                         </div>
-                    </div>
+                    </form>
                 </div>
-                <div>
-                    <div class="form-group class">
-                        <label for="exampleFormControlTextarea1 pt-2">Observacoes</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="observacoes"></textarea>
-                    </div>
-                </div>
+                <br>
+                <button type="button" class="btn btn-success float-right ">Salvar</button>
             </div>
-            <button type="submit"  class="btn btn-success float-right ">Salvar</button>
-        </form>
-        <br>
-        
+        </div>
     </div>
-
-
 
     </div>
 
