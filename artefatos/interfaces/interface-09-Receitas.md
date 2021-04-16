@@ -8,12 +8,13 @@
 ## 2. Relacionamentos com outras interfaces
 O usuário terá acesso a outras interfaces por meio da tela:
 
-  1.Ao clicar no botão Agenda, ele terá acesso à página da agenda, com suas consultas;
-  2.Ao clicar no botão Pacientes, ele será direcionado à página com a lista de pacientes e a busca;
-  3.Ao clicar no botão Logout, ele será redirecionado à página de login;
-  4.Ao clicar no botão Dados, ele terá acesso aos dados daquele paciente;
-  5.Ao clicar no botão Anamneses, ele terá acesso às anamneses daquele paciente;
-  6.Ao clicar no botão Exames, ele terá acesso aos pedidos de exame daquele paciente;
+1. Ao clicar no botão Agenda, ele terá acesso à página da agenda, com suas consultas;
+2. Ao clicar no botão Pacientes, ele será direcionado à página com a lista de pacientes e a busca;
+3. Ao clicar no botão Logout, ele será redirecionado à página de login;
+4. Ao clicar no botão Dados, ele terá acesso aos dados daquele paciente;
+5. Ao clicar no botão Anamneses, ele terá acesso às anamneses daquele paciente;
+6. Ao clicar no botão Exames, ele terá acesso aos pedidos de exame daquele paciente;
+
 
 
 ## 3. Campos
