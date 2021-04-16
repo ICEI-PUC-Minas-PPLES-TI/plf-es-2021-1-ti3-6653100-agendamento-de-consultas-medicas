@@ -2,7 +2,7 @@
 
 ## 1. Leiaute sugerido
 
-![Formulario cadastro paciente](https://user-images.githubusercontent.com/65324450/111717282-82dc0180-8836-11eb-8f67-0104785eef8c.jpg)
+![Formulario cadastro paciente](https://user-images.githubusercontent.com/69217117/114953508-e6098580-9e2e-11eb-9c85-89c1efeef4ca.jpg)
 
 ## 2. Relacionamentos com outras interfaces
 
@@ -28,17 +28,16 @@ O usuário terá acesso a outras interfaces por meio da home:
 |11. |Cor|Cor do paciente|Uma das opções da caixa de seleção|Caixa de seleção|Caixa de seleção|Alguma opção deve ser selecionada|
 |12. |Naturalidade|Naturalidade do paciente|Letras|String|Caixa de texto|-|
 |14. |CPF|CPF do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
-|15. |Titular do CPF|Titular do CPF|Letras|String|Caixa de texto|-|
-|16. |Profissão|Profissão do paciente|Letras|String|Caixa de texto|-|
-|17. |Email para envio de informações médicas|Email do paciente|letras, números e caracteres especiais|String|Caixa de texto|Não pode deixar vazio|
-|18. |Logradouro|Logradouro do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
-|19. |Complemento|Complemento do paciente|Números|String|Caixa de texto|Deve ser preenchido apenas se for apartamento|
-|20. |Bairro|Bairro do Paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
-|21. |Cidade|Cidade do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
-|22. |UF|UF do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
-|23. |CEP|CEP do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
-|24. |Telefone|Telefone de contato do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
-|25. |Observações|Observações|Letras|String|Caixa de texto|-|
+|15. |Profissão|Profissão do paciente|Letras|String|Caixa de texto|-|
+|16. |Email para envio de informações médicas|Email do paciente|letras, números e caracteres especiais|String|Caixa de texto|Não pode deixar vazio|
+|17. |Logradouro|Logradouro do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|18. |Complemento|Complemento do paciente|Números|String|Caixa de texto|Deve ser preenchido apenas se for apartamento|
+|19. |Bairro|Bairro do Paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|20. |Cidade|Cidade do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|21. |UF|UF do paciente|Letras|String|Caixa de texto|Não pode deixar vazio|
+|22. |CEP|CEP do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
+|23. |Telefone|Telefone de contato do paciente|Números|String|Caixa de texto|Não pode deixar vazio|
+|24. |Observações|Observações|Letras|String|Caixa de texto|-|
 
 ## 4. Comandos
 
