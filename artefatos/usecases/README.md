@@ -2,6 +2,6 @@
 
 * UC 1-EfetuarLogin.md - Login na plataforma
 * UC 2-GerenciarPaciente.md - CRUD paciente
-* UC 3-BuscarPaciente.md - Descrição do terceiro caso de uso
+* UC 3-Gerenciar Consulta.md - 
 
 
