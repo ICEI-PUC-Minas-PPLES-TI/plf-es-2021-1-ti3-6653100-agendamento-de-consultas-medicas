@@ -51,5 +51,9 @@ body{
 .card-group-f{
     margin-bottom: 10px;
     margin-left: 30px; 
+    cursor: pointer;
 }
 
+.card-group-f > button{
+    cursor: pointer;
+}
