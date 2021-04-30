@@ -3,19 +3,36 @@
 	padding: 0;
 	box-sizing: border-box;
 }
-.right_area{
-	margin-top: -1.5%;
+
+.wrapper{
+	margin-left: 0px !important;
 }
+
 body {
 	background-color: white;
 	font-family: 'Saira', Arial, Helvetica, sans-serif;
 }
 
-.buttons{
-	position: absolute;
-	margin-top: 490px;
-	font-size: xx-large;
-	left: 5%;
+.btn-consulta{
+	font-size: 15px;
+	border: solid;
+	border-color:black;
+	background-color: #75ddba; 
+	color: black; 
+	width:94px; 
+	height:38px;  
+	border-radius: 30px;
+	position: fixed;
+	margin-top: 23%;
+	left: 20%;
+	padding: 8px;
+}
+
+.btn2{
+	left: 28% !important;
+}
+.btn1{
+	padding-left: 23px;
 }
 
 .table {
@@ -24,8 +41,8 @@ body {
 }
 
 .tables{
-	position: relative;
-	left: 22%;
+	float: left;
+	margin-left: 90px;
 	margin-top: 2%;
 	font-size: larger;
 }
@@ -42,65 +59,128 @@ table#alter tr.dif td {
 	font-size: large;
 }
 .hora{
-	position: absolute;
-	margin-top: 11%;
-	left: 69%;
+	position: fixed;
+	margin-top: 15%;
+	left: 59%;
 }
 .tipo{
-	position: absolute;
-	margin-top: 11%;
-	left: 75.2%;
+	position: fixed;
+	margin-top: 15%;
+	left: 65.2%;
 }
 .valor{
-	position: absolute;
-	margin-top: 11%;
-	left: 89.2%;
+	position: fixed;
+	margin-top: 15%;
+	left: 79.2%;
 }
 .nome{
-	position: absolute;
-	margin-top: 15%;
-	left: 69%;
+	position: fixed;
+	margin-top: 19%;
+	left: 59%;
 }
 .convenio{
-	position: absolute;
-	margin-top: 15%;
-	left: 89.3%;
+	position: fixed;
+	margin-top: 19%;
+	left: 79.3%;
 }
 .status{
-	position: absolute;
-	margin-top: 19%;
-	left: 69%;
+	position: fixed;
+	margin-top: 23%;
+	left: 59%;
 }
 .chegada{
-	position: absolute;
-	margin-top: 19%;
-	left: 79.5%;
+	position: fixed;
+	margin-top: 23%;
+	left: 69.5%;
 }
 .atendido{
-	position: absolute;
-	margin-top: 19%;
-	left: 88%;
+	position: fixed;
+	margin-top: 23%;
+	left: 78%;
 }
 .notas{
-	position: absolute;
-	margin-top: 23%;
-	left: 69%;
+	position: fixed;
+	margin-top: 27%;
+	left: 59%;
 }
+.btn-create{
+	position: fixed;
+	margin-top: 32%;
+	left: 59%;
+}
+.btn-novo{
+	position: fixed;
+	margin-top: 32%;
+	left: 66%;
+}
+.btn-save{
+	position: fixed;
+	margin-top: 22%;
+	left: 20%;
+}
+
+
+.hora2{
+	position: absolute;
+	margin-top: 5%;
+	left: 20%;
+}
+.tipo2{
+	position: absolute;
+	margin-top: 5%;
+	left: 26.2%;
+}
+.valor2{
+	position: absolute;
+	margin-top: 5%;
+	left: 40.2%;
+}
+.nome2{
+	position: absolute;
+	margin-top: 9%;
+	left: 20%;
+}
+.convenio2{
+	position: absolute;
+	margin-top: 9%;
+	left: 40.3%;
+}
+.status2{
+	position: absolute;
+	margin-top: 13%;
+	left: 20%;
+}
+.chegada2{
+	position: absolute;
+	margin-top: 13%;
+	left: 30.5%;
+}
+.atendido2{
+	position: absolute;
+	margin-top: 13%;
+	left: 39%;
+}
+.notas2{
+	position: absolute;
+	margin-top: 17%;
+	left: 20%;
+}
+
 
 /* CALENDARIO*/
 
 .date-picker {
-	position: relative;
+	position: fixed;
 	width: 100%;
 	max-width: 235px;
 	height: 28px;
 	background-color:#75ddba;
 	margin: 36px auto;
 	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-	left: 375px;
+	left: 900px;
+	top: 110px;
 	cursor: pointer;
 	user-select: none;
-	margin-top:-425px;
 }
 
 .date-picker:hover {
@@ -170,4 +250,7 @@ table#alter tr.dif td {
 .date-picker .dates .days .day.selected {
 	background-color: #75ddba;
 }    
-    
+
+.imprime-label{
+	float: left;
+}
