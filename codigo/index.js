@@ -6,6 +6,7 @@ const bodyParser = require("body-parser"); //traduzir dados enviados em uma estr
 const connection = require("./database/database");
 const Usuario = require("./database/users");
 const Paciente = require("./database/pacientes");
+const Consulta = require("./database/consultas");
 
 //Database
 connection
@@ -252,6 +253,145 @@ app.post("/pacientes/update", (req,res) => {
 
 });
 
-app.get("/recuperarsenha", (req, res) => {
-    res.render("recuperarsenha")
+//gerenciando consultas
+
+app.get("/agenda", (req, res) => {
+    Consulta.findAll().then(consultas => {
+        res.render("date", {consultas: consultas});
+    });
 })
+
+app.post("/salvarConsulta", (req, res) => {
+
+    var hora = req.body.hora;
+    var tipo = req.body.tipo;
+    var nome = req.body.nome;
+    var convenio = req.body.convenio;
+    var valor = req.body.valor;
+    var status = req.body.status;
+    var chegada = req.body.chegada;
+    var atendido = req.body.atendido;
+    var notas = req.body.notas;
+
+    if(Consulta != undefined){
+
+        Consulta.create({
+
+            hora: hora,
+            tipo: tipo,
+            nome: nome,
+            convenio: convenio,
+            valor: valor,
+            status: status,
+            chegada: chegada,
+            atendido: atendido,
+            notas: notas
+
+        }).then(()=>{
+            res.redirect("/agenda");
+        });
+
+    }else{
+        res.redirect("/agenda");
+    }
+})
+
+app.get("/agenda/consulta/:id", (req, res) => {
+
+    var id = req.params.id;
+
+    Consulta.findByPk(id).then(consulta => {
+        
+        if(isNaN(id)){
+            res.redirect("/agenda");
+        }
+        if(consulta != undefined){
+            res.render("dateEscolhida", {consulta: consulta});
+        }else{
+            res.redirect("/agenda");
+        }
+        
+    }).catch(erro => {
+        res.redirect("/agenda");
+    });
+    
+});
+
+app.post("/agenda/consulta/delete", (req,res) => {
+    var id = req.body.id;
+
+    if(id != undefined){
+
+        if(!isNaN(id)){ //id é numerico ou não
+
+            Consulta.destroy({
+                where: {
+                    id: id
+                }
+            }).then(()=>{
+                res.redirect("/agenda");
+            })
+
+        }else{
+            res.redirect("/agenda");
+        }
+
+    }else{
+        res.redirect("/agenda");
+    }
+});
+
+app.get("/agenda/consulta/edit/:id", (req, res) => {
+
+    var id = req.params.id;
+
+    Consulta.findByPk(id).then(consulta => {
+        
+        if(isNaN(id)){
+            res.redirect("/agenda/consulta/:id");
+        }
+        
+        if(consulta != undefined){
+            res.render("editConsulta", {consulta: consulta});
+        }else{
+            res.redirect("/agenda/consulta/:id");
+        }
+        
+    }).catch(erro => {
+        res.redirect("/agenda/consulta/:id");
+    });
+    
+});
+
+app.post("/agenda/consulta/update", (req,res) => {
+    var id = req.body.id;
+    var hora = req.body.hora;
+    var tipo = req.body.tipo;
+    var nome = req.body.nome;
+    var convenio = req.body.convenio;
+    var valor = req.body.valor;
+    var status = req.body.status;
+    var chegada = req.body.chegada;
+    var atendido = req.body.atendido;
+    var notas = req.body.notas;
+
+        Consulta.update({
+            hora: hora,
+            tipo: tipo,
+            nome: nome,
+            convenio: convenio,
+            valor: valor,
+            status: status,
+            chegada: chegada,
+            atendido: atendido,
+            notas: notas
+        }, {
+            where: {
+                id: id
+            }
+
+        }).then(()=>{
+            res.redirect("/agenda/consulta/:id");
+        });
+
+});
