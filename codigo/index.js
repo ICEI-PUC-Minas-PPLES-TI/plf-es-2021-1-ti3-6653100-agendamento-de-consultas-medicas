@@ -251,3 +251,7 @@ app.post("/pacientes/update", (req,res) => {
 
 
 });
+
+app.get("/recuperarsenha", (req, res) => {
+    res.render("recuperarsenha")
+})
