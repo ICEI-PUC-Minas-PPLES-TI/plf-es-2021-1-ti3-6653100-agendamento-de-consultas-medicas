@@ -1,26 +1,34 @@
-# Caso de uso NUM DO CASO DE USO - NOME DO CASO DE USO
+# Caso de uso 04 - Gerenciar Prontuário
 
 ## 1. Descrição
 
+Cadastro das anamneses e exames e consultas.
+
 ## 2. Atores
+
+Médico.
 
 ## 3. Precondições
 
+	1. O médico deve estar logado na plataforma;
+	2. O paciente já deve estar cadastrado;
+	3. O médico já deve estar na página Pacientes.
 
-	1. Descrição da pré-condição 1
-	2. Descrição da pré-condição 2
- 
 ## 4. Fluxo principal
 
-    1.
-	2. 
+    1. O caso de uso se inicia quando o médico seleciona o paciente em questão;
+    2. O médico seleciona o botão Anameses ou no botão Exames;
+    3. Se selecionar o botão exames, o médico preenche o campo com as informações sobre os exames do paciente;
+    4. Se selecionar o botão anamneses, o médico preenche o campo com as informações sobre as anamneses do paciente;
+    5. O médico seleciona salvar.
+
 
 ## 5. Fluxos alternativos
 
-### 5.1 Fluxo alternativo NOME DO FLUXO ALTERNATIVO 1
+### 5.1 Fluxo alternativo Atualizar: 3
 
-| **Precondições**  | 1.  |
-| --- | --- |
-|                   | 2.  |
-| **Passos**        | 1.  |
-|                   | 2.  |
+**Passos** 
+1. Se selecionar o botão exames, o médico faz as atualizações necessárias sobre os exames do paciente;
+2. 1. Se selecionar o botão anamneses, o médico faz as atualizações necessárias sobre as anamneses do paciente;
+3. 5. O médico seleciona salvar.
+
