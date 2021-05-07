@@ -19,7 +19,7 @@ Médico.
     1. O caso de uso se inicia quando o médico seleciona o paciente em questão;
     2. O médico seleciona o botão Anameses;
     3. O médico preenche o campo com as informações sobre as anamneses do paciente;
-    5. O médico seleciona salvar.
+    4. O médico seleciona salvar.
 
 
 ## 5. Fluxos alternativos
