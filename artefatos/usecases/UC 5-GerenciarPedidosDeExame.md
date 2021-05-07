@@ -18,15 +18,18 @@ Médico.
 
     1. O caso de uso se inicia quando o médico seleciona o paciente em questão;
     2. O médico seleciona o botão Exames;
-    3. O médico preenche o campo com as informações sobre os exames do paciente;
+    3. O médico preenche o campo com o pedido de exame do paciente;
     4. O médico seleciona salvar.
 
 
 ## 5. Fluxos alternativos
 
-### 5.1 Fluxo alternativo Atualizar: 3
+### 5.1 Fluxo alternativo Novo Pedido de exame: 3
 
 **Passos** 
-1. O médico faz as atualizações necessárias sobre os exames do paciente;
-2. O médico seleciona salvar.
+1. O médico seleciona o botão Novo Exame;
+2. O médico preenche o campo com o pedido de exame do paciente;
+3. O médico seleciona salvar.
+
+
 
