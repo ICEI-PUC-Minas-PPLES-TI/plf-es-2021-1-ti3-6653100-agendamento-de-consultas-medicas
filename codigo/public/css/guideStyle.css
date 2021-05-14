@@ -340,12 +340,12 @@
 .tipo{
 	position: fixed;
 	margin-top: 13.5%;
-	left: 64%;
+	left: 66%;
 }
 .valor{
 	position: fixed;
 	margin-top: 13.5%;
-	left: 81.8%;
+	left: 83.8%;
 }
 .nome{
 	position: fixed;
@@ -355,7 +355,7 @@
 .convenio{
 	position: fixed;
 	margin-top: 18.5%;
-	left: 81.8%;
+	left: 83.8%;
     width: 110px;
 }
 .status{
@@ -366,12 +366,12 @@
 .chegada{
 	position: fixed;
 	margin-top: 23.5%;
-	left: 70.5%;
+	left: 72.5%;
 }
 .atendido{
 	position: fixed;
 	margin-top: 23.5%;
-	left: 80.5%;
+	left: 82.5%;
 }
 .notas{
 	position: fixed;
@@ -390,7 +390,7 @@
 }
 .btn-save{
 	position: fixed;
-	margin-top: 26%;
+	margin-top: 27%;
 	left: 16.4%;
 }
 
@@ -450,12 +450,12 @@
 .tipo3{
 	position: absolute;
 	margin-top: 5%;
-	left: 21.6%;
+	left: 23.6%;
 }
 .valor3{
 	position: absolute;
 	margin-top: 5%;
-	left: 39.6%;
+	left: 41.6%;
 }
 .nome3{
 	position: absolute;
@@ -465,7 +465,7 @@
 .convenio3{
 	position: absolute;
 	margin-top: 10%;
-	left: 39.6%;
+	left: 40.6%;
 }
 .status3{
 	position: absolute;
@@ -475,12 +475,12 @@
 .chegada3{
 	position: absolute;
 	margin-top: 15%;
-	left: 27.9%;
+	left: 29.9%;
 }
 .atendido3{
 	position: absolute;
 	margin-top: 15%;
-	left: 38.4%;
+	left: 40.4%;
 }
 .notas3{
 	position: absolute;

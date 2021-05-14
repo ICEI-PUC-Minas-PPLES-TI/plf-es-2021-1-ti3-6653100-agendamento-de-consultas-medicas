@@ -23,7 +23,7 @@
             <form class="text-box" method="POST" action="/agenda/consulta/update">
                 <div class="hora3">
                     <h6><b>Hora</b></h6>
-                    <select id="" class="form-control " name="hora">
+                    <select id="" class="form-select" name="hora">
                         <option selected><%= consulta.hora %></option>
                         <option> 8:30</option>
                         <option> 9:10</option>
@@ -49,7 +49,7 @@
                 </div>
                 <div class="convenio3">
                     <h6><b>Convênio</b></h6>
-                    <select id="inputConvenio" class="form-control " name="convenio">
+                    <select id="inputConvenio" class="form-select" name="convenio">
                         <option selected><%= consulta.convenio %></option>
                         <option> Cassi</option>
                         <option> Particular</option>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="status3">
                     <h6><b>Status</b></h6>
-                    <select id="inputStatus" class="form-control " name="status" >
+                    <select id="inputStatus" class="form-select" name="status" >
                         <option selected><%= consulta.status %></option>
                         <option>Aguardando</option>
                         <option>Atendido</option>
@@ -79,7 +79,7 @@
                 </div>
                 <div class="notas3">
                     <h6><b>Notas</b></h6>
-                    <textarea name="notas" cols="48" rows="2" value=""><%= consulta.notas%></textarea>
+                    <textarea class="form-control" name="notas" cols="51" rows="2" value=""><%= consulta.notas%></textarea>
                 </div>
 
                 <input type="hidden" name="id" value="<%= consulta.id %>">
