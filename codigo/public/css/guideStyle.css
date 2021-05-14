@@ -133,7 +133,7 @@
 .menu_select{
     position: relative;
     right: 560px;
-    top: 60px;
+    top: 20px;
 }
   
 .resultado-pesquisa{
@@ -587,4 +587,33 @@
 
 .titulo-agendamento{
     margin-left: -550px;
+}
+
+/*botão busca dos formulários*/
+
+.nome label{
+    position: fixed;
+}
+
+.campo-nome{
+    margin-top: 24px;
+    float: left;
+    max-width: 280px;
+}
+
+.btnBuscaNome{
+    margin-top: 29px;
+    margin-left: 10px;
+    float: right;
+}
+
+.campo-nome2{
+    float: left;
+    max-width: 280px;
+}
+
+.btnBuscaNome2{
+    margin-top: 5px;
+    margin-left: 10px;
+    float: right;
 }
