@@ -1,12 +1,22 @@
+
+var cors = require("cors")
 const express = require("express")
 const app = express()
 const bcrypt = require('bcryptjs')
+const nodemailer = require("nodemailer")
+const crypto = require("crypto")
+
+
 
 const bodyParser = require("body-parser"); //traduzir dados enviados em uma estrutura js
 const connection = require("./database/database");
 const Usuario = require("./database/users");
 const Paciente = require("./database/pacientes");
 const Consulta = require("./database/consultas");
+
+app.use(cors())
+
+app.use(express.json())
 
 //Database
 connection
@@ -396,8 +406,68 @@ app.post("/agenda/consulta/update", (req,res) => {
 
 });
 
-//recuperarSenha
-
 app.get("/recuperarSenha", (req, res) => {
-    res.render("recuperarSenha")
+
+        res.render("recuperarSenha");
+    
+});
+
+app.post("/recuperarSenha", (req, res) => {
+
+    const email = req.body.email
+
+    try {
+   
+    Usuario.findOne({
+        where: {
+            email: email
+        }
+    })
+
+        const transporter = nodemailer.createTransport({
+            host: "smtp.mailtrap.io",
+            port: 2525,
+            auth: {
+                user: "b2cdf13d14f9d6",
+                pass: "218f41d04fa05f"
+           }
+        })
+
+            const newPassword = crypto.randomBytes(4).toString('HEX')
+
+            transporter.sendMail({
+                from: 'Administrador <29d704b73c-ee302f@inbox.mailtrap.io>',
+                to: email,
+                subject: 'Recuperacao de senha!',
+                html: `<p>Ola , sua nova senha para acessar o sistema ${newPassword}</p><br/><a href="http://localhost:5001/">Sistema</a>`
+            }).then(
+                    () => {
+
+                    
+                            Usuario.update({senha : newPassword},{
+                                where: {
+                                    email: email
+                                }
+                             }).then(
+                                () => {
+                                    return res.status(200).json({ message: 'Email sended'})
+                                }
+                                ).catch(
+                                () => {
+                                    return response.status(404).json({ message: 'User not found'})
+                                }
+                            )
+
+                    
+                }
+            ).catch(
+                () => {
+                    return res.status(404).json({message: 'fail to send email'})
+                }
+            )
+
+        } catch(error) {
+        return res.status(404).json({message : 'User not found'})
+    }
+
 });
