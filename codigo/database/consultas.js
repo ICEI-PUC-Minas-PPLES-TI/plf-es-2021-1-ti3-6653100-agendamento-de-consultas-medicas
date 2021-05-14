@@ -3,8 +3,8 @@ const connection = require("./database");
 
 const Consulta = connection.define('consulta', {
     data:{
-        type: Sequelize.DATE,
-        allowNull: true
+        type: Sequelize.STRING,
+        allowNull: false
     },
     hora:{
         type: Sequelize.STRING,
