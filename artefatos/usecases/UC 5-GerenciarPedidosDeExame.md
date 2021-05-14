@@ -18,19 +18,37 @@ Médico.
 
     1. O caso de uso se inicia quando o médico seleciona o paciente em questão;
     2. O médico seleciona o botão Exames;
-    3. O médico é redirecionado à página com 
+    3. O médico é redirecionado à página com os exames do paciente;
     4. O médico preenche o campo com o pedido de exame do paciente;
     5. O médico seleciona salvar.
 
 
 ## 5. Fluxos alternativos
 
-### 5.1 Fluxo alternativo Novo Pedido de exame: 3
+## 5. Fluxos alternativos
+
+### 5.1 Fluxo alternativo Novo Exame: 4
 
 **Passos** 
-1. O médico seleciona o botão Novo Exame;
-2. O médico preenche o campo com o pedido de exame do paciente;
+1. O médico seleciona o botão Novo exame;
+2. O médico preenche o campo com o exame do paciente;
 3. O médico seleciona salvar.
+
+### 5.1 Fluxo alternativo Editar exame: 4
+
+**Passos** 
+1. O médico seleciona o exame do paciente que deseja editar;
+2. O médico seleciona o botão Editar;
+3. O médico faz as alterações necessárias;
+4. O médico seleciona salvar.
+
+### 5.1 Fluxo alternativo Excluir: 4
+
+**Passos** 
+1. O médico seleciona o exame do paciente que deseja excluir;
+2. O médico seleciona o botão Excluir;
+3. O médico confirma a exclusão da anamnese;
+
 
 
 
