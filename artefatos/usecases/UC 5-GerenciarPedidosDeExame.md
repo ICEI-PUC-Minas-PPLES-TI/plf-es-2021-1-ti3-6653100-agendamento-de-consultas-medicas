@@ -47,7 +47,7 @@ Médico.
 **Passos** 
 1. O médico seleciona o exame do paciente que deseja excluir;
 2. O médico seleciona o botão Excluir;
-3. O médico confirma a exclusão da anamnese;
+3. O médico confirma a exclusão do exame;
 
 
 
