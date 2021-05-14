@@ -1,0 +1,590 @@
+* {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+}
+
+/*Login*/
+
+.body-login{
+    background-color: #77E1BB;
+}
+.form-login{
+    width: 450px;
+    margin: auto;
+    padding-top: 60px;
+}
+.card{
+    box-shadow: 1px 1px 5 px white;
+    background-color: white;
+    padding: 50px;
+    border-radius: 5px;
+}
+.card-group{
+    margin-bottom: 10px;
+    margin-left: 30px;
+    border-bottom: 2px solid #adadad;
+    margin: 30px;
+}
+
+.card-group-f > button{
+    background-color: #77E1BB;
+    width: 75%;
+    border-radius: 30px;
+    margin-left: 30px;
+    font-size: x-large;
+    color: white;
+    border: none;
+}
+
+.card-top{
+    text-align: center;
+}
+
+.card-group > input{
+    border-radius: 3px;
+    outline: 0;
+    width: 80%;
+    height: 18px;
+    padding: 5px;
+    border: none;
+}
+
+.card-group > label{
+    width: 100%;
+    color: black;
+    display: block;
+}
+
+.card-group-f{
+    margin-bottom: 10px;
+    margin-left: 30px; 
+    cursor: pointer;
+}
+
+.card-group-f > button{
+    cursor: pointer;
+}
+
+/*Recuperar senha*/
+
+.box-senha{
+    margin-bottom: 50px;
+    margin: 140px;
+    box-shadow: 1px 1px 5 px white;
+    padding: 20px;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 150px;
+    background: white;
+    padding: 30px;
+    max-width: 400px;
+}
+
+.form-signin{
+    width: 270px;
+    margin: auto;
+    padding-top: 10px;
+    background-color: white;
+    padding-bottom: 10px;
+}
+
+.btn-card{
+    cursor: pointer;
+    width: auto;
+    margin-bottom: 10px;
+    width: 90%;
+    height: 10%;
+}
+
+/*css pagCadastro*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.wrapper{
+    margin-left: 600px;
+    width: 500px;
+}
+
+/* busca */
+.opcao{
+    margin: 10px;
+    position: absolute;
+    width: 400px;
+    height: 56px;
+    left: 25px;
+    top: 210px;
+    font-size: 16px;
+    line-height: 56px;
+    color: #000000;
+    text-decoration: none;
+}
+  
+.texto{
+    position: relative;
+    bottom: 8px;
+}
+  
+.menu_select{
+    position: relative;
+    right: 560px;
+    top: 60px;
+}
+  
+.resultado-pesquisa{
+    position: absolute;
+    padding: 400px;
+    top: 160px;
+    border-top: 1px solid #77E1BB;
+    border-bottom: 1px solid #77E1BB;
+    border-left: 1px solid #77E1BB;
+    border-right: 1px solid #77E1BB;
+}
+  
+.select{
+    padding: 16px 368px;
+    border: 1px solid black;
+    cursor: pointer;
+    border-radius: 4px;
+}
+  
+.submit{
+    position: relative;
+    font-family: Roboto;
+    padding: 2px 12px;
+    left: 20px;
+    bottom: -9px;
+    background-color: white;
+}
+  
+.submit:hover{
+    background-color: #75ddba;
+}
+  
+.resultado-pesquisa ul li{
+    position: relative;
+    bottom: 600px;
+    right: 390px;
+}
+  
+.form{
+    display: flex;
+    flex-direction: column;
+    border-color: black;
+}
+  
+.field{
+    position: relative;
+    padding: 17px;
+    bottom: -40px;
+    margin-right: 174px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+.pesquisar{
+    position: relative;
+    width: 900px;
+}
+
+.input-pesquisa{
+    width: 413px;
+}
+
+.btn-enviar{
+    width: 100px;
+    height: 36px;
+}
+
+/* fim busca */
+  
+.logout_btn{
+    float: right;
+    margin-right: 50px;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #77E1BB;
+    border: solid;
+    border-radius: 20px;
+    border-color: #77E1BB;
+    padding: 10px;
+}
+
+.engloba {
+    display: grid;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 70px auto;
+    grid-template-areas: 'AS MH' 'AS CT';
+    height: 100vh;
+}
+
+.aside {
+    display: flex;
+    grid-area: AS;
+    border-right: 1px solid #77E1BB;
+
+}
+
+.aside .logo{
+    height: 130px;
+    margin-left: -18px;
+}
+
+.aside .menu ul a {
+    color: black;
+    display: flex;
+    margin-top: 28px;
+    margin-left: 20px;
+    width: 120px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.aside .menu ul a:hover {
+    text-decoration: none;
+    border: 1px solid #77E1BB;
+    border-radius: 5px;
+}
+
+.main-header {
+    background-color: white;
+}
+
+.content {
+    padding-left: 15px;
+    padding-right: 30px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-area: CT;
+}
+
+.content-home{
+    margin-left: 20px;
+}
+
+.info{
+    font-size: 30px;
+    margin-left: 15px;
+}
+
+.cadastro{
+    margin-left: -20px;
+    width: 1000px;
+}
+
+/*pacientes*/
+
+.form-paciente{
+    margin-left: 60px ;
+}
+
+.form-paciente h3{
+    margin-left: -20px;
+}
+
+/*date*/
+
+.btn-consulta{
+	font-size: 15px;
+	border: solid;
+	border-color:black;
+	background-color: #75ddba; 
+	color: black; 
+	width:94px; 
+	height:38px;  
+	border-radius: 30px;
+	position: fixed;
+	margin-top: 23%;
+	left: 20%;
+	padding: 8px;
+}
+
+.btn2{
+	left: 23% !important;
+    width: 120px;
+}
+.btn1{
+    left: 16.4% !important;
+	padding-left: 23px;
+}
+
+.table {
+	border-collapse: collapse;
+}
+
+.tables{
+	float: left;
+	margin-left: -550px;
+	margin-top: 2%;
+    width: 500px;
+}
+
+.content{
+	position: relative;
+	left: 22%;
+}
+
+.text-box{
+	font-size: large;
+}
+.hora{
+	position: fixed;
+	margin-top: 13.5%;
+	left: 59%;
+}
+.tipo{
+	position: fixed;
+	margin-top: 13.5%;
+	left: 64%;
+}
+.valor{
+	position: fixed;
+	margin-top: 13.5%;
+	left: 81.8%;
+}
+.nome{
+	position: fixed;
+	margin-top: 18.5%;
+	left: 59%;
+}
+.convenio{
+	position: fixed;
+	margin-top: 18.5%;
+	left: 81.8%;
+    width: 110px;
+}
+.status{
+	position: fixed;
+	margin-top: 23.5%;
+	left: 59%;
+}
+.chegada{
+	position: fixed;
+	margin-top: 23.5%;
+	left: 70.5%;
+}
+.atendido{
+	position: fixed;
+	margin-top: 23.5%;
+	left: 80.5%;
+}
+.notas{
+	position: fixed;
+	margin-top: 28.5%;
+	left: 59%;
+}
+.btn-create{
+	position: fixed;
+	margin-top: 35%;
+	left: 59%;
+}
+.btn-novo{
+	position: fixed;
+	margin-top: 35%;
+	left: 65%;
+}
+.btn-save{
+	position: fixed;
+	margin-top: 26%;
+	left: 16.4%;
+}
+
+
+.hora2{
+	position: absolute;
+	margin-top: 5%;
+	left: 16.4%;
+}
+.tipo2{
+	position: absolute;
+	margin-top: 5%;
+	left: 22.6%;
+}
+.valor2{
+	position: absolute;
+	margin-top: 5%;
+	left: 36.4%;
+}
+.nome2{
+	position: absolute;
+	margin-top: 9%;
+	left: 16.4%;
+}
+.convenio2{
+	position: absolute;
+	margin-top: 9%;
+	left: 35.7%;
+}
+.status2{
+	position: absolute;
+	margin-top: 13%;
+	left: 16.4%;
+}
+.chegada2{
+	position: absolute;
+	margin-top: 13%;
+	left: 26.9%;
+}
+.atendido2{
+	position: absolute;
+	margin-top: 13%;
+	left: 35.4%;
+}
+.notas2{
+	position: absolute;
+	margin-top: 17%;
+	left: 16.4%;
+}
+
+
+.hora3{
+	position: absolute;
+	margin-top: 5%;
+	left: 16.4%;
+}
+.tipo3{
+	position: absolute;
+	margin-top: 5%;
+	left: 21.6%;
+}
+.valor3{
+	position: absolute;
+	margin-top: 5%;
+	left: 39.6%;
+}
+.nome3{
+	position: absolute;
+	margin-top: 10%;
+	left: 16.4%;
+}
+.convenio3{
+	position: absolute;
+	margin-top: 10%;
+	left: 39.6%;
+}
+.status3{
+	position: absolute;
+	margin-top: 15%;
+	left: 16.4%;
+}
+.chegada3{
+	position: absolute;
+	margin-top: 15%;
+	left: 27.9%;
+}
+.atendido3{
+	position: absolute;
+	margin-top: 15%;
+	left: 38.4%;
+}
+.notas3{
+	position: absolute;
+	margin-top: 20%;
+	left: 16.4%;
+}
+
+
+/* CALENDARIO*/
+
+.date-picker {
+	position: fixed;
+	width: 100%;
+	max-width: 235px;
+	height: 28px;
+	background-color:#75ddba;
+	margin: 36px auto;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+	left: 900px;
+	top: 88px;
+	cursor: pointer;
+	user-select: none;
+}
+
+.date-picker:hover {
+	background-color: #F3F3F3;
+}
+
+.date-picker .selected-date {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	color: #020202; 
+	font-size: 20px;
+}
+
+.date-picker .dates {
+	position: absolute;
+	top: 100%; /*tira a parte onde mostra a data*/
+	right: 0;
+	left: 0;
+	background-color: #FFF;
+}
+
+.date-picker .dates.active {
+	display: block;
+}
+
+.date-picker .dates .month {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 2px solid #EEE;
+}
+
+.date-picker .dates .month .arrows {
+	width: 35px;
+	height: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #000000;
+	font-size: 20px;
+}
+
+.date-picker .dates .month .arrows:hover {
+	background-color: #F3F3F3;
+}
+
+.date-picker .dates .month .arrows:active {
+	background-color: #75ddba;
+}
+
+.date-picker .dates .days {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	height: 120px;
+}
+.date-picker .dates .days .day { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #313131;
+}
+.date-picker .dates .days .day.selected {
+	background-color: #75ddba;
+}    
+
+.tables tr td a{
+    text-decoration: none;
+}
+
+.tables tr td{
+    padding: 10px;
+}
+
+.tables .top{
+    background-color: #75ddba;
+}
+
+.titulo-agendamento{
+    margin-left: -550px;
+}
