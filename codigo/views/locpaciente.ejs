@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Side Navigation Bar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <title>Side Navigation Bar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/guideStyle.css">
 </head>
 
@@ -13,51 +15,54 @@
 
         <%- include ('partials/menuLateral.ejs'); %>
 
-        <div class="wrapper">
+            <div class="wrapper">
 
-            <div class="main_content">
-                <div class="menu_select">
-                    <form action="">
-                        <label for="">Localizar paciente por: </label>
-                        <select class="form-control">
-                            <option disabled selected></option>
-                            <option value="1">opcao1</option>
-                            <option value="2">opcao2</option>
-                            <option value="3">opcao3</option>
-                            <option value="4">opcao4</option>
-                        </select>
-                    </form>
-
-                    <br>
-        
-                    <div class="pesquisar">
-
-                        <form class="row g-3">
-                            <div class="col-auto">
-                              <input class="input-pesquisa form-control" placeholder="Digite sua pesquisa">
-                            </div>
-                            <div class="col-auto">
-                              <button type="submit" class="btn btn-success mb-3">Enviar</button>
-                            </div>
+                <div class="main_content">
+                    <div class="menu_select">
+                        <form action="">
+                            <label for="">Localizar paciente por: </label>
+                            <select class="form-control">
+                                <option disabled selected></option>
+                                <option value="1">opcao1</option>
+                                <option value="2">opcao2</option>
+                                <option value="3">opcao3</option>
+                                <option value="4">opcao4</option>
+                            </select>
                         </form>
-                        
-                    </div>
-                    <div class="resultado-pesquisa">
-                        <ul>
-                            <% pacientes.forEach(paciente => {%>
-                                <li>
-                                    <br>
-                                    <a class="opcao" href="/pacientes/perfil/<%= paciente.id %>"><%= paciente.nome %></a>
-                                    <br>
-                                </li>
-                            <% }); %>
-                        </ul>
+
+                        <br>
+
+                        <div class="pesquisar">
+
+                            <form class="row g-3">
+                                <div class="col-auto">
+                                    <input class="input-pesquisa form-control" placeholder="Digite sua pesquisa">
+                                </div>
+                                <div class="col-auto">
+                                    <button type="submit" class="btn btn-success mb-3">Enviar</button>
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="resultado-pesquisa">
+                            <ul>
+                                <% pacientes.forEach(paciente=> {%>
+                                    <li>
+                                        <br>
+                                        <a class="opcao" href="/pacientes/perfil/<%= paciente.id %>">
+                                            <%= paciente.nome %>
+                                        </a>
+                                        <br>
+                                    </li>
+                                    <% }); %>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-        </div>
+            </div>
     </div>
 
 </body>
+
 </html>
