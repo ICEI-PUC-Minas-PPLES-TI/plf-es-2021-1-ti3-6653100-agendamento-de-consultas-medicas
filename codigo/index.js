@@ -395,3 +395,9 @@ app.post("/agenda/consulta/update", (req,res) => {
         });
 
 });
+
+//recuperarSenha
+
+app.get("/recuperarSenha", (req, res) => {
+    res.render("recuperarSenha")
+});
