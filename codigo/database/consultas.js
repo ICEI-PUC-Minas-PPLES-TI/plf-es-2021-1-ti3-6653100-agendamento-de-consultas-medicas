@@ -2,16 +2,8 @@ const Sequelize = require ("sequelize");
 const connection = require("./database");
 
 const Consulta = connection.define('consulta', {
-    dia:{
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    mes:{
-        type: Sequelize.INTEGER,
-        allowNull: true
-    },
-    ano:{
-        type: Sequelize.INTEGER,
+    data:{
+        type: Sequelize.DATE,
         allowNull: true
     },
     hora:{
