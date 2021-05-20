@@ -1,11 +1,10 @@
 # Ata de Reunião 12 - Agendamento De Consultas Médicas
 
 ## Informações
-**Data/hora:** 06/05, 18:00  
+**Data/hora:** 21/05, 15:30  
 **Local:** Microsoft Teams  
-**Motivo da reunião:** Reunião para corrigir e fazer o diagrama de casos de uso.
-**Secretário:** Júlia Martins
-
+**Motivo da reunião:** Reunião para verificar andamento do desenvolvimento do software e dos documentos.
+**Secretário:** Rafael Augusto
 ## Participantes
 Estiveram presentes na reunião:
 - Isabel Pinheiro Matos
@@ -17,7 +16,7 @@ Estiveram presentes na reunião:
 
 Item | Descrição
 ---- | ----
-Revisão da documentaçao | • Correção do diagrma de usecases<br>• Divivisão das tarefas para a próxima entrega<br>
+Revisão da documentaçao | • Verificar documentos para apresentação do dia 21/05<br>• Revisão no progresso do desenvolvimento das novas telas (front end) e das funcionalidades das paginas de calendário e busca de paciente (back end)<br>
 
 ## Notas e Decisões
 Item | Quem | Anotações |
@@ -27,8 +26,8 @@ Item | Quem | Anotações |
 ## Ações e pendências
 | Feito (S/N)? | Item | Responsável | Data para solução |
 | ---- | ---- | ---- | ---- |
-| |Frontend do prontuario | Júlia e Rafael | Até 11/05|
-| |Backend do prontuario | Isabel e Luiz | Até 14/05|
+| |Frontend novas páginas (anamneses) | Júlia e Rafael | Até 21/05|
+| |Backend do calendário e busca de paciente | Isabel e Luiz | Até 21/05|
 
 ## Outras notas e informações
 N/A
