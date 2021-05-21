@@ -285,8 +285,13 @@ app.get("/agenda", (req, res) => {
         where: {
             data: data,
         },
+        include: [{
+            model: Paciente,
+        }] //pega dados do relacionamento
     }).then(consultas => {
-        res.render("date", { consultas: consultas });
+        Paciente.findAll().then(pacientes => {
+            res.render("date", { consultas: consultas, pacientes: pacientes });
+        })
     });
 
 })
@@ -310,13 +315,13 @@ app.post("/salvarConsulta", (req, res) => {
     var data = req.body.data;
     var hora = req.body.hora;
     var tipo = req.body.tipo;
-    var nome = req.body.nome;
     var convenio = req.body.convenio;
     var valor = req.body.valor;
     var status = req.body.status;
     var chegada = req.body.chegada;
     var atendido = req.body.atendido;
     var notas = req.body.notas;
+    var paciente = req.body.paciente;
 
     if (Consulta != undefined) {
 
@@ -325,13 +330,13 @@ app.post("/salvarConsulta", (req, res) => {
             data: data,
             hora: hora,
             tipo: tipo,
-            nome: nome,
             convenio: convenio,
             valor: valor,
             status: status,
             chegada: chegada,
             atendido: atendido,
-            notas: notas
+            notas: notas,
+            pacienteId: paciente,
 
         }).then(() => {
             res.redirect("/agenda");
@@ -346,13 +351,21 @@ app.get("/agenda/consulta/:id", (req, res) => {
 
     var id = req.params.id;
 
-    Consulta.findByPk(id).then(consulta => {
+    Consulta.findAll({
+        where: {
+            id: id,
+        },
+        include: [{
+            model: Paciente,
+        }] //pega dados do relacionamento
+    
+    }).then(consultas => {
 
         if (isNaN(id)) {
             res.redirect("/agenda");
         }
-        if (consulta != undefined) {
-            res.render("dateEscolhida", { consulta: consulta });
+        if (consultas != undefined) {
+            res.render("dateEscolhida", { consultas: consultas });
         } else {
             res.redirect("/agenda");
         }
@@ -391,14 +404,24 @@ app.get("/agenda/consulta/edit/:id", (req, res) => {
 
     var id = req.params.id;
 
-    Consulta.findByPk(id).then(consulta => {
+    Consulta.findAll({
+        where: {
+            id: id,
+        },
+        include: [{
+            model: Paciente,
+        }] //pega dados do relacionamento
+    
+    }).then(consultas => {
 
         if (isNaN(id)) {
             res.redirect("/agenda/consulta/:id");
         }
 
-        if (consulta != undefined) {
-            res.render("editConsulta", { consulta: consulta });
+        if (consultas != undefined) {
+            Paciente.findAll().then(pacientes => {
+                res.render("editConsulta", { consultas: consultas, pacientes: pacientes });
+            })
         } else {
             res.redirect("/agenda/consulta/:id");
         }
@@ -413,24 +436,24 @@ app.post("/agenda/consulta/update", (req, res) => {
     var id = req.body.id;
     var hora = req.body.hora;
     var tipo = req.body.tipo;
-    var nome = req.body.nome;
     var convenio = req.body.convenio;
     var valor = req.body.valor;
     var status = req.body.status;
     var chegada = req.body.chegada;
     var atendido = req.body.atendido;
     var notas = req.body.notas;
+    var paciente = req.body.paciente;
 
     Consulta.update({
         hora: hora,
         tipo: tipo,
-        nome: nome,
         convenio: convenio,
         valor: valor,
         status: status,
         chegada: chegada,
         atendido: atendido,
-        notas: notas
+        notas: notas,
+        pacienteId: paciente,
     }, {
         where: {
             id: id
