@@ -20,69 +20,71 @@
 
                 <h3 class="titulo-agendamento">Dados da consulta</h3>
 
+                <% consultas.forEach(consulta => {%>
 
-                <form class="text-box" method="POST" action="/salvarConsulta">
-                    <div class="hora2">
-                        <h6><b>Hora</b></h6>
-                        <label class="imprime-label">
-                            <%=consulta.hora%>
-                        </label>
-                    </div>
-                    <div class="tipo2">
-                        <h6><b>Tipo de compromisso</b></h6>
-                        <label class="imprime-label">
-                            <%=consulta.tipo%>
-                        </label>
-                    </div>
-                    <div class="nome2">
-                        <h6><b>Nome do paciente</b></h6>
-                        <label class="imprime-label">
-                            <%=consulta.nome%>
-                        </label>
-                    </div>
-                    <div class="convenio2">
-                        <h6><b>Convênio</b></h6>
-                        <label class="imprime-label">
-                            <%=consulta.convenio%>
-                        </label>
-                    </div>
-                    <div class="valor2">
-                        <h6><b>Valor</b></h6>
-                        <label class="imprime-label">
-                            <%=consulta.valor%>
-                        </label>
-                    </div>
-                    <div class="status2">
-                        <h6><b>Status</b></h6>
-                        <label class="imprime-label">
-                            <%=consulta.status%>
-                        </label>
-                    </div>
-                    <div class="chegada2">
-                        <h6><b>Chegada</b></h6>
-                        <label class="imprime-label">
-                            <%=consulta.chegada%>
-                        </label>
-                    </div>
-                    <div class="atendido2">
-                        <h6><b>Atendido</b></h6>
-                        <label class="imprime-label">
-                            <%=consulta.atendido%>
-                        </label>
-                    </div>
-                    <div class="notas2">
-                        <h6><b>Notas</b></h6>
-                        <textarea class="imprime-label"><%=consulta.notas%></textarea>
-                    </div>
+                    <form class="text-box" method="POST" action="/salvarConsulta">
+                        <div class="hora2">
+                            <h6><b>Hora</b></h6>
+                            <label class="imprime-label">
+                                <%=consulta.hora%>
+                            </label>
+                        </div>
+                        <div class="tipo2">
+                            <h6><b>Tipo de compromisso</b></h6>
+                            <label class="imprime-label">
+                                <%=consulta.tipo%>
+                            </label>
+                        </div>
+                        <div class="nome2">
+                            <h6><b>Nome do paciente</b></h6>
+                            <label class="imprime-label">
+                                <%= consulta.paciente.nome %>
+                            </label>
+                        </div>
+                        <div class="convenio2">
+                            <h6><b>Convênio</b></h6>
+                            <label class="imprime-label">
+                                <%=consulta.convenio%>
+                            </label>
+                        </div>
+                        <div class="valor2">
+                            <h6><b>Valor</b></h6>
+                            <label class="imprime-label">
+                                <%=consulta.valor%>
+                            </label>
+                        </div>
+                        <div class="status2">
+                            <h6><b>Status</b></h6>
+                            <label class="imprime-label">
+                                <%=consulta.status%>
+                            </label>
+                        </div>
+                        <div class="chegada2">
+                            <h6><b>Chegada</b></h6>
+                            <label class="imprime-label">
+                                <%=consulta.chegada%>
+                            </label>
+                        </div>
+                        <div class="atendido2">
+                            <h6><b>Atendido</b></h6>
+                            <label class="imprime-label">
+                                <%=consulta.atendido%>
+                            </label>
+                        </div>
+                        <div class="notas2">
+                            <h6><b>Notas</b></h6>
+                            <textarea class="imprime-label"><%=consulta.notas%></textarea>
+                        </div>
 
-                </form>
+                    </form>
 
-                <a class="btn btn-success btn-consulta btn1" href="/agenda/consulta/edit/<%= consulta.id %>"><b>Editar</b></a>
+                    <a class="btn btn-success btn-consulta btn1" href="/agenda/consulta/edit/<%= consulta.id %>"><b>Editar</b></a>
 
-                <form method="POST" action="/agenda/consulta/delete" onsubmit="confirmarDelecao(event, this)">
-                    <input type="hidden" name="id" value="<%= consulta.id%>">
-                    <button class="btn btn-success btn-consulta btn2" type="submit"><b>Desmarcar</b></button>
-                </form>
+                    <form method="POST" action="/agenda/consulta/delete" onsubmit="confirmarDelecao(event, this)">
+                        <input type="hidden" name="id" value="<%= consulta.id%>">
+                        <button class="btn btn-success btn-consulta btn2" type="submit"><b>Desmarcar</b></button>
+                    </form>
+                <% }); %> 
 
             </div>
 

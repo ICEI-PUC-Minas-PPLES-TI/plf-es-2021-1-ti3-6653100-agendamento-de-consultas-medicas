@@ -20,71 +20,80 @@
     
             <h3 class="titulo-agendamento">Editar consulta</h3>  
     
-            <form class="text-box" method="POST" action="/agenda/consulta/update">
-                <div class="hora3">
-                    <h6><b>Hora</b></h6>
-                    <select id="" class="form-select" name="hora">
-                        <option selected><%= consulta.hora %></option>
-                        <option> 8:30</option>
-                        <option> 9:10</option>
-                        <option> 9:50</option>
-                        <option> 10:30</option>
-                        <option> 11:10</option>
-                        <option> 11:50</option>
-                        <option> 13:30</option>
-                        <option> 14:10</option>
-                        <option> 14:50</option>
-                        <option> 15:30</option>
-                        <option> 16:10</option>
-                    </select>
-                </div>
-                <div class="tipo3">
-                    <h6><b>Tipo de compromisso</b></h6>
-                    <input class="form-control" type="text" name="tipo" size="23" value="<%= consulta.tipo %>"/>
-                </div>
-                <div class="nome3">
-                    <h6><b>Nome do paciente</b></h6>
-                    <input class="campo-nome2 form-control" type="text" name="nome" size="25" value="<%= consulta.nome %>"/>
-                    <button class="btnBuscaNome2" type="submit">&#128269;</button>
-                </div>
-                <div class="convenio3">
-                    <h6><b>Convênio</b></h6>
-                    <select id="inputConvenio" class="form-select" name="convenio">
-                        <option selected><%= consulta.convenio %></option>
-                        <option> Cassi</option>
-                        <option> Particular</option>
-                        <option> Part desc.</option>
-                    </select>
-                </div>
-                <div class="valor3">
-                    <h6><b>Valor</b></h6>
-                    <input class="form-control" type="text" name="valor" size="5" value="<%= consulta.valor %>"/>
-                </div>
-                <div class="status3">
-                    <h6><b>Status</b></h6>
-                    <select id="inputStatus" class="form-select" name="status" >
-                        <option selected><%= consulta.status %></option>
-                        <option>Aguardando</option>
-                        <option>Atendido</option>
-                        <option>Nao Compareceu</option>
-                    </select>
-                </div>
-                <div class="chegada3">
-                    <h6><b>Chegada</b></h6>
-                    <input class="form-control" type="text" name="chegada" size="8" value="<%= consulta.chegada %>"/>
-                </div>
-                <div class="atendido3">
-                    <h6><b>Atendido</b></h6>
-                    <input class="form-control" type="text" name="atendido" size="8" value="<%= consulta.atendido %>"/>
-                </div>
-                <div class="notas3">
-                    <h6><b>Notas</b></h6>
-                    <textarea class="form-control" name="notas" cols="51" rows="2" value=""><%= consulta.notas%></textarea>
-                </div>
+            <% consultas.forEach(consulta => {%>
+                <form class="text-box" method="POST" action="/agenda/consulta/update">
+                    <div class="hora3">
+                        <h6><b>Hora</b></h6>
+                        <select id="" class="form-select" name="hora">
+                            <option selected><%= consulta.hora %></option>
+                            <option> 8:30</option>
+                            <option> 9:10</option>
+                            <option> 9:50</option>
+                            <option> 10:30</option>
+                            <option> 11:10</option>
+                            <option> 11:50</option>
+                            <option> 13:30</option>
+                            <option> 14:10</option>
+                            <option> 14:50</option>
+                            <option> 15:30</option>
+                            <option> 16:10</option>
+                        </select>
+                    </div>
+                    <div class="tipo3">
+                        <h6><b>Tipo de compromisso</b></h6>
+                        <input class="form-control" type="text" name="tipo" size="23" value="<%= consulta.tipo %>"/>
+                    </div>
+                    <div class="nome3">
+                        <h6><b>Nome do paciente</b></h6>
+                        
+                        <select name="paciente" class="form-control campo-nome2">
+                                <option selected><%= consulta.paciente.nome %></option>
+                            <% pacientes.forEach((paciente) => {%>
+                                <option value="<%= paciente.id %>"><%= paciente.nome %></option>
+                            <% }) %>
+                        </select>
+                        <!-- <button class="btnBuscaNome2" type="submit">&#128269;</button> -->
 
-                <input type="hidden" name="id" value="<%= consulta.id %>">
-                <button class="btn btn-success btn-save" type="submit">Salvar</button>
+                    </div>
+                    <div class="convenio3">
+                        <h6><b>Convênio</b></h6>
+                        <select id="inputConvenio" class="form-select" name="convenio">
+                            <option selected><%= consulta.convenio %></option>
+                            <option> Cassi</option>
+                            <option> Particular</option>
+                            <option> Part desc.</option>
+                        </select>
+                    </div>
+                    <div class="valor3">
+                        <h6><b>Valor</b></h6>
+                        <input class="form-control" type="text" name="valor" size="5" value="<%= consulta.valor %>"/>
+                    </div>
+                    <div class="status3">
+                        <h6><b>Status</b></h6>
+                        <select id="inputStatus" class="form-select" name="status" >
+                            <option selected><%= consulta.status %></option>
+                            <option>Aguardando</option>
+                            <option>Atendido</option>
+                            <option>Nao Compareceu</option>
+                        </select>
+                    </div>
+                    <div class="chegada3">
+                        <h6><b>Chegada</b></h6>
+                        <input class="form-control" type="text" name="chegada" size="8" value="<%= consulta.chegada %>"/>
+                    </div>
+                    <div class="atendido3">
+                        <h6><b>Atendido</b></h6>
+                        <input class="form-control" type="text" name="atendido" size="8" value="<%= consulta.atendido %>"/>
+                    </div>
+                    <div class="notas3">
+                        <h6><b>Notas</b></h6>
+                        <textarea class="form-control" name="notas" cols="51" rows="2" value=""><%= consulta.notas%></textarea>
+                    </div>
 
+                    <input type="hidden" name="id" value="<%= consulta.id %>">
+                    <button class="btn btn-success btn-save" type="submit">Salvar</button>
+
+                <% }); %> 
                 
             </form>
 

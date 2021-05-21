@@ -34,7 +34,7 @@
                         <% if(consulta.hora == "8:30"){%>
                             <tr>
                                 <td align="center"> 8:30 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td> 
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td> 
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -44,7 +44,7 @@
                         <% if(consulta.hora == "9:10"){%>
                             <tr>
                                 <td align="center"> 9:10 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -54,7 +54,7 @@
                         <% if(consulta.hora == "9:50"){%>
                             <tr>
                                 <td align="center"> 9:50 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -64,7 +64,7 @@
                         <% if(consulta.hora == "10:30"){%>
                             <tr>
                                 <td align="center"> 10:30 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -74,7 +74,7 @@
                         <% if(consulta.hora == "11:10"){%>
                             <tr>
                                 <td align="center"> 11:10 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -84,7 +84,7 @@
                         <% if(consulta.hora == "11:50"){%>
                             <tr>
                                 <td align="center"> 11:50 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -94,7 +94,7 @@
                         <% if(consulta.hora == "13:30"){%>
                             <tr>
                                 <td align="center"> 13:30 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -104,7 +104,7 @@
                         <% if(consulta.hora == "14:10"){%>
                             <tr>
                                 <td align="center"> 14:10 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -114,7 +114,7 @@
                         <% if(consulta.hora == "14:50"){%>
                             <tr>
                                 <td align="center"> 14:50 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -124,7 +124,7 @@
                         <% if(consulta.hora == "15:30"){%>
                             <tr>
                                 <td align="center"> 15:30 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -134,7 +134,7 @@
                         <% if(consulta.hora == "16:10"){%>
                             <tr>
                                 <td align="center"> 16:10 </td>
-                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.nome %></a></td>
+                                <td align="center" height="35"> <a href="/agenda/consulta/<%= consulta.id %>"><%= consulta.paciente.nome %></a></td>
                                 <td align="center"><%= consulta.tipo %></td>
                                 <td align="center"><%= consulta.status %></td>
                                 <td align="center"><%= consulta.valor %></td>
@@ -188,8 +188,12 @@
                 </div>
                 <div class="nome">
                     <label>Nome do Paciente</label>
-                    <input class="form-control campo-nome" type="text" name="nome" size="25" />
-                    <button class="btnBuscaNome" type="">&#128269;</button>
+                    <select name="paciente" class="form-control campo-nome">
+                        <% pacientes.forEach((paciente) => {%>
+                            <option value="<%= paciente.id %>"><%= paciente.nome %></option>
+                        <% }) %>
+                    </select>
+                    <!--  <button class="btnBuscaNome" type="">&#128269;</button> -->
                 </div>
                 <div class="convenio">
                     <label>Convênio</label>
