@@ -598,7 +598,7 @@
 .campo-nome{
     margin-top: 24px;
     float: left;
-    max-width: 280px;
+    min-width: 370px;
 }
 
 .btnBuscaNome{
@@ -609,7 +609,7 @@
 
 .campo-nome2{
     float: left;
-    max-width: 280px;
+    min-width: 360px;
 }
 
 .btnBuscaNome2{
