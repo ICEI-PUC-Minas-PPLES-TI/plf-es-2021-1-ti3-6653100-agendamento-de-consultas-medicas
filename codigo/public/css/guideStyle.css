@@ -617,3 +617,16 @@
     margin-left: 10px;
     float: right;
 }
+
+/*css anamneses*/
+.resizedTextbox{
+    position: relative;
+    top: 40px;
+    width: 830px; height: 350px
+
+}
+
+.anamneses{
+    position: relative;
+    top: 40px;
+}
