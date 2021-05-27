@@ -623,10 +623,14 @@
     position: relative;
     top: 40px;
     width: 830px; height: 350px
-
 }
 
 .anamneses{
+    position: relative;
+    top: 40px;
+}
+
+.exames{
     position: relative;
     top: 40px;
 }
