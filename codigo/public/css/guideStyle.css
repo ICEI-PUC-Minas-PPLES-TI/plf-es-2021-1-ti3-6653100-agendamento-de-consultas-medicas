@@ -220,6 +220,7 @@
     grid-template-columns: 200px auto;
     grid-template-rows: 70px auto;
     grid-template-areas: 'AS MH' 'AS CT';
+    height: 100vh;
 }
 
 .aside {
