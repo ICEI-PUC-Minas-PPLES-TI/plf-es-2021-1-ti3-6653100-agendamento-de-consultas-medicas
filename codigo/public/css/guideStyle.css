@@ -220,14 +220,13 @@
     grid-template-columns: 200px auto;
     grid-template-rows: 70px auto;
     grid-template-areas: 'AS MH' 'AS CT';
-    height: 100vh;
 }
 
 .aside {
     display: flex;
     grid-area: AS;
     border-right: 1px solid #77E1BB;
-
+    min-height: 100%;
 }
 
 .aside .logo{
@@ -235,12 +234,30 @@
     margin-left: -18px;
 }
 
+.dropdown-toggle::after{
+    display: none;
+}
+
+.dropdown-menu.show{
+    padding: 0px;
+    max-width: 120px;
+    min-width: 120px;
+}
+
 .aside .menu ul a {
     color: black;
     display: flex;
     margin-top: 28px;
-    margin-left: 20px;
-    width: 120px;
+    margin-left: 10px;
+    width: 100px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-item{
+    color: black;
+    margin-top: 0px !important;
+    margin-left: 15px;
     padding: 5px;
     text-decoration: none;
 }
@@ -622,7 +639,7 @@
 .resizedTextbox{
     position: relative;
     top: 40px;
-    width: 830px; height: 350px
+    width: 830px; height: 200px
 }
 
 .anamneses{
@@ -638,4 +655,16 @@
 .receitas{
     position: relative;
     top: 40px;
+}
+
+.btn-novoProntuario{
+    margin-top: 60px;
+}
+
+.btn-prontuario{
+    margin-top: 50px;
+}
+
+.btn-savePront{
+    margin-top: 50px;
 }
