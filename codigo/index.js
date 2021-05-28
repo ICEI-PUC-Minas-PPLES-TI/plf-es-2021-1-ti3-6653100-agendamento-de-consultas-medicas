@@ -10,6 +10,9 @@ const connection = require("./database/database");
 const Usuario = require("./database/users");
 const Paciente = require("./database/pacientes");
 const Consulta = require("./database/consultas");
+const Anamnese = require("./database/anamneses");
+const Exame = require("./database/exames");
+const Receita = require("./database/receitas");
 
 app.use(cors())
 
@@ -285,9 +288,12 @@ app.get("/agenda", (req, res) => {
         where: {
             data: data,
         },
-        include: [{
+        include: [{//pega dados do relacionamento
             model: Paciente,
-        }] //pega dados do relacionamento
+        }],
+        order: [
+            ['hora', 'DESC']
+        ] 
     }).then(consultas => {
         Paciente.findAll().then(pacientes => {
             res.render("date", { consultas: consultas, pacientes: pacientes });
@@ -531,4 +537,404 @@ Usuario.findOne({
     return res.status(404).json({message : 'User not found'})
 }
 
+});
+
+//Dados
+
+app.get("/receitas/:id", (req, res) => {
+
+    var id = req.params.id;
+
+    Paciente.findOne({
+        where: {
+            id: id
+        },
+        include: [{model: Receita}]
+    }).then(paciente => {
+
+        if (paciente != undefined) {
+            res.render("receitas", { paciente: paciente , receitas: paciente.receitas});
+        } else {
+            res.redirect("/pacientes");
+        }
+
+    }).catch(erro => {
+        res.redirect("/pacientes");
+    });
+    
+});
+
+app.get("/anamneses/:id", (req, res) => {
+
+    var id = req.params.id;
+
+    Paciente.findOne({
+        where: {
+            id: id
+        },
+        include: [{model: Anamnese}]
+    }).then(paciente => {
+
+        if (paciente != undefined) {
+            res.render("anamneses", { paciente: paciente , anamneses: paciente.anamneses});
+        } else {
+            res.redirect("/pacientes");
+        }
+
+    }).catch(erro => {
+        res.redirect("/pacientes");
+    });
+
+});
+
+app.get("/exames/:id", (req, res) => {
+
+    var id = req.params.id;
+
+    Paciente.findOne({
+        where: {
+            id: id
+        },
+        include: [{model: Exame}]
+    }).then(paciente => {
+
+        if (paciente != undefined) {
+            res.render("exames", { paciente: paciente , exames: paciente.exames});
+        } else {
+            res.redirect("/pacientes");
+        }
+
+    }).catch(erro => {
+        res.redirect("/pacientes");
+    });
+});
+
+app.get("/receitas/:id/novaReceita", (req, res) => {
+
+    var id = req.params.id;
+
+    Paciente.findOne({
+        where: {
+            id: id
+        }
+    }).then(paciente => {
+
+        if (paciente != undefined) {
+            res.render("novaReceita", { paciente: paciente });
+        } else {
+            res.redirect("/receitas/:id");
+        }
+
+    }).catch(erro => {
+        res.redirect("/receitas/:id");
+    });
+})
+
+app.get("/anamneses/:id/novaAnamnese", (req, res) => {
+    var id = req.params.id;
+
+    Paciente.findOne({
+        where: {
+            id: id
+        }
+    }).then(paciente => {
+
+        if (paciente != undefined) {
+            res.render("novaAnamnese", { paciente: paciente });
+        } else {
+            res.redirect("/anamneses/:id");
+        }
+
+    }).catch(erro => {
+        res.redirect("/anamneses/:id");
+    });
+})
+
+app.get("/exames/:id/novoExame", (req, res) => {
+    var id = req.params.id;
+
+    Paciente.findOne({
+        where: {
+            id: id
+        }
+    }).then(paciente => {
+
+        if (paciente != undefined) {
+            res.render("novoExame", { paciente: paciente });
+        } else {
+            res.redirect("/exames/:id");
+        }
+
+    }).catch(erro => {
+        res.redirect("/exames/:id");
+    });
+})
+
+app.post("/salvarReceita", (req, res) => {
+
+    var texto = req.body.texto;
+    var paciente = req.body.paciente;
+
+    if (Receita != undefined) {
+
+        Receita.create({
+
+            texto: texto,
+            pacienteId: paciente,
+
+        }).then(() => {
+            res.redirect("/receitas/:id");
+        });
+
+    } else {
+        res.redirect("/receitas/:id");
+    }
+})
+
+app.get("/receitas/edit/:id", (req, res) => {
+
+    var id = req.params.id;
+
+    Receita.findOne({
+        where: {
+            id: id
+        },
+        include: [{model: Paciente}]
+    }).then(receita => {
+
+        if (receita != undefined) {
+            res.render("editReceita", { receita: receita, paciente: receita.paciente});
+        } else {
+            res.redirect("/receitas/:id");
+        }
+
+    }).catch(erro => {
+        res.redirect("/receitas/:id");
+    });
+
+});
+
+app.post("/receitas/update", (req, res) => {
+
+    var id = req.body.id;
+    var texto = req.body.texto;
+    var paciente = req.body.paciente;
+
+    Receita.update({
+        texto: texto,
+        pacienteId: paciente,
+    }, {
+        where: {
+            id: id
+        }
+
+    }).then(() => {
+        res.redirect("/receitas/:pacienteId");
+    });
+
+});
+
+app.post("/receitas/delete", (req, res) => {
+
+    var id = req.body.id;
+
+    if (id != undefined) {
+
+        if (!isNaN(id)) { //id é numerico ou não
+
+            Receita.destroy({
+                where: {
+                    id: id
+                }
+            }).then(() => {
+                res.redirect("/receitas/:pacienteId");
+            })
+
+        } else {
+            res.redirect("/receitas/:pacienteId");
+        }
+
+    } else {
+        res.redirect("/receitas/:pacienteId");
+    }
+});
+
+
+app.post("/salvarExame", (req, res) => {
+
+    var texto = req.body.texto;
+    var paciente = req.body.paciente;
+
+    if (Exame != undefined) {
+
+        Exame.create({
+
+            texto: texto,
+            pacienteId: paciente,
+
+        }).then(() => {
+            res.redirect("/exames/:id");
+        });
+
+    } else {
+        res.redirect("/exames/:id");
+    }
+})
+
+app.get("/exames/edit/:id", (req, res) => {
+
+    var id = req.params.id;
+
+    Exame.findOne({
+        where: {
+            id: id
+        },
+        include: [{model: Paciente}]
+    }).then(exame => {
+
+        if (exame != undefined) {
+            res.render("editExame", { exame: exame, paciente: exame.paciente});
+        } else {
+            res.redirect("/exames/:id");
+        }
+
+    }).catch(erro => {
+        res.redirect("/exames/:id");
+    });
+
+});
+
+app.post("/exames/update", (req, res) => {
+
+    var id = req.body.id;
+    var texto = req.body.texto;
+    var paciente = req.body.paciente;
+
+    Exame.update({
+        texto: texto,
+        pacienteId: paciente,
+    }, {
+        where: {
+            id: id
+        }
+
+    }).then(() => {
+        res.redirect("/exames/:pacienteId");
+    });
+
+});
+
+app.post("/exames/delete", (req, res) => {
+
+    var id = req.body.id;
+
+    if (id != undefined) {
+
+        if (!isNaN(id)) { //id é numerico ou não
+
+            Exame.destroy({
+                where: {
+                    id: id
+                }
+            }).then(() => {
+                res.redirect("/exames/:pacienteId");
+            })
+
+        } else {
+            res.redirect("/exames/:pacienteId");
+        }
+
+    } else {
+        res.redirect("/exames/:pacienteId");
+    }
+});
+
+
+app.post("/salvarAnamnese", (req, res) => {
+
+    var texto = req.body.texto;
+    var paciente = req.body.paciente;
+
+    if (Anamnese != undefined) {
+
+        Anamnese.create({
+
+            texto: texto,
+            pacienteId: paciente,
+
+        }).then(() => {
+            res.redirect("/anamneses/:id");
+        });
+
+    } else {
+        res.redirect("/anamneses/:id");
+    }
+})
+
+app.get("/anamneses/edit/:id", (req, res) => {
+
+    var id = req.params.id;
+
+    Anamnese.findOne({
+        where: {
+            id: id
+        },
+        include: [{model: Paciente}]
+    }).then(anamnese => {
+
+        if (anamnese != undefined) {
+            res.render("editAnamnese", { anamnese: anamnese, paciente: anamnese.paciente});
+        } else {
+            res.redirect("/anamneses/:id");
+        }
+
+    }).catch(erro => {
+        res.redirect("/anamneses/:id");
+    });
+
+});
+
+app.post("/anamneses/update", (req, res) => {
+
+    var id = req.body.id;
+    var texto = req.body.texto;
+    var paciente = req.body.paciente;
+
+    Anamnese.update({
+        texto: texto,
+        pacienteId: paciente,
+    }, {
+        where: {
+            id: id
+        }
+
+    }).then(() => {
+        res.redirect("/anamneses/:pacienteId");
+    });
+
+});
+
+app.post("/anamneses/delete", (req, res) => {
+
+    var id = req.body.id;
+
+    if (id != undefined) {
+
+        if (!isNaN(id)) { //id é numerico ou não
+
+            Anamnese.destroy({
+                where: {
+                    id: id
+                }
+            }).then(() => {
+                res.redirect("/anamneses/:pacienteId");
+            })
+
+        } else {
+            res.redirect("/anamneses/:pacienteId");
+        }
+
+    } else {
+        res.redirect("/anamneses/:pacienteId");
+    }
 });
