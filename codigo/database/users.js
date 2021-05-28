@@ -20,14 +20,15 @@ const Usuario = connection.define('user', {
 //vai criar a tabela se não existir. Se existir, não vai forçar a criação
 Usuario.sync({force: false}).then(() => {}); 
 
-var salt = bcrypt.genSaltSync(10);
+
+var salt = bcrypt.genSaltSync(8);
 var hash = bcrypt.hashSync("12345", salt);
 
 //criando os usuários e senhas se não existirem
 Usuario.findOrCreate({
     where: {id: 1},
     defaults: {
-        email: "medico@gmail.com",
+        email: "29d704b73c-ee302f@inbox.mailtrap.io",
         senha: hash,
         nome: "Dr. Rosalvo"
     }
@@ -38,15 +39,6 @@ Usuario.findOrCreate({
         email: "secretaria@gmail.com",
         senha: hash,
         nome: "Secretária"
-    }
-});
-
-Usuario.findOrCreate({
-    where: {id: 3},
-    defaults: {
-        email: "29d704b73c-ee302f@inbox.mailtrap.io",
-        senha: 12345,
-        nome: "userTest"
     }
 });
 
