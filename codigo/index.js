@@ -39,7 +39,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.listen(5001, () => {
+app.listen(5000, () => {
     console.log("Server is started")
 })
 
@@ -54,7 +54,7 @@ app.post("/", (req, res) => {
 
             var correct = bcrypt.compareSync(senha, usuario.senha)
 
-            if (correct) {
+            if (senha == usuario.senha) {
                 res.render("home", {
                     usuario: usuario
                 });
@@ -481,63 +481,63 @@ app.get("/recuperarSenha", (req, res) => {
 
 app.post("/recuperarSenha", (req, res) => {
 
-const email = req.body.email
-
-try {
-
-Usuario.findOne({
-    where: {
-        email: email
-    }
-})
-
-    const transporter = nodemailer.createTransport({
-        host: "smtp.mailtrap.io",
-        port: 2525,
-        auth: {
-            user: "b2cdf13d14f9d6",
-            pass: "218f41d04fa05f"
-       }
+    const email = req.body.email
+    
+    try {
+    
+    Usuario.findOne({
+        where: {
+            email: email
+        }
     })
-
-        const newPassword = crypto.randomBytes(4).toString('HEX')
-
-        transporter.sendMail({
-            from: 'Administrador <29d704b73c-ee302f@inbox.mailtrap.io>',
-            to: email,
-            subject: 'Recuperacao de senha!',
-            html: `<p>Ola , sua nova senha para acessar o sistema ${newPassword}</p><br/><a href="http://localhost:5001/">Sistema</a>`
-        }).then(
+    
+        const transporter = nodemailer.createTransport({
+            host: "smtp.mailtrap.io",
+            port: 2525,
+            auth: {
+                user: "b2cdf13d14f9d6",
+                pass: "218f41d04fa05f"
+           }
+        })
+    
+            const newPassword = crypto.randomBytes(4).toString('HEX')
+    
+            transporter.sendMail({
+                from: 'Administrador <29d704b73c-ee302f@inbox.mailtrap.io>',
+                to: email,
+                subject: 'Recuperacao de senha!',
+                html: `<p>Ola , sua nova senha para acessar o sistema ${newPassword}</p><br/><a href="http://localhost:5000/">Sistema</a>`
+            }).then(
+                    () => {
+    
+                        bcrypt.hash(newPassword, 8).then(
+                            Usuario.update({senha : newPassword},{
+                                where: {
+                                    email: email
+                                }
+                             }).then(
+                                () => {
+                                    return res.status(200).json({ message: 'Email sended'})
+                                }
+                                ).catch(
+                                () => {
+                                    return response.status(404).json({ message: 'User not found'})
+                                }
+                            ))
+    
+                    
+                }
+            ).catch(
                 () => {
-
-                
-                        Usuario.update({senha : newPassword},{
-                            where: {
-                                email: email
-                            }
-                         }).then(
-                            () => {
-                                return res.status(200).json({ message: 'Email sended'})
-                            }
-                            ).catch(
-                            () => {
-                                return response.status(404).json({ message: 'User not found'})
-                            }
-                        )
-
-                
-            }
-        ).catch(
-            () => {
-                return res.status(404).json({message: 'fail to send email'})
-            }
-        )
-
-    } catch(error) {
-    return res.status(404).json({message : 'User not found'})
-}
-
-});
+                    return res.status(404).json({message: 'fail to send email'})
+                }
+            )
+    
+        } catch(error) {
+        return res.status(404).json({message : 'User not found'})
+    }
+    
+    });
 
 //Dados
 
