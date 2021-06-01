@@ -1,13 +1,13 @@
 # AGENDAMENTO DE CONSULTAS MÉDICAS
 
 
-**Isabel Pinheiro Matos, email do aluno 1**
+**Isabel Pinheiro Matos, ipmatos2000@gmail.com**
 
-**Júlia Martins Reis, email do aluno 2**
+**Júlia Martins Reis, juliamreis@gmail.com**
 
-**Luiz Henrique de Jesus Ramos, email do aluno 3**
+**Luiz Henrique de Jesus Ramos, 1043283@sga.pucminas.br**
 
-**Rafael Augusto Vieira de Almeida, email do aluno 4**
+**Rafael Augusto Vieira de Almeida, rafael.augusto098@gmail.com**
 
 ---
 
@@ -17,94 +17,133 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade Cató
 
 ---
 
-_**Resumo**. Escrever aqui o resumo. O resumo deve contextualizar rapidamente o trabalho, descrever seu objetivo e, ao final, 
-mostrar algum resultado relevante do trabalho (até 10 linhas)._
+_**Resumo**. 
+    O trabalho, referente a matéria TI-3: aplicações em cenários reais, tem como objetivo criar uma aplicação para o agendamento e gerenciamento de consultas médicas e de pacientes de um consultório de endocrinologia. O grupo, em reunião com o cliente Dr.Rosalvo, conseguiu identificar todas as suas satisfações e insatisfações com o sistema utilizado atualmente no consultório. A partir disso, as insatisfações do cliente com relação a presença de uma funcionalidade no sistema para a criação de pedidos de exame foram sanadas. 
 
 ---
 
 
 ## 1. Introdução
 
-A introdução deve apresentar de dois a quatro parágrafos de contextualização do trabalho. 
 
     1.1 Contextualização
+Este trabalho consiste na criação de um sistema de agendamento e gerenciamento de consultas médicas e de pacientes do consultório de endocrinologia do Dr.Rosalvo. A solução é uma proposta de sistema para ser aplicada na área da saúde e segue a regulamentação do Conselho Regional de Medicina, restringindo alguns acessos que possuem dados confidenciais entre paciente e médico. 
 
-Na **contextualização**, o aluno deve dizer do que se trata o trabalho, em que área ou contexto se insere. 
-A **contextualização** deve ser desenvolvida de algo mais genérico para algo mais específico. 
-A citação de pesquisas quantitativas é bem aceita aqui (corretamente referenciadas).
 
     1.2 Problema
+O Consultório de Endocrinologia do dr. Rosalvo Reis atualmente utiliza o software "Hi Doctor" para a sua organização. O sistema fornece agenda, prontuário médico, prescrição eletrônica, entre outras funcionalidades. Entretanto, foram declaradas as seguintes insatisfações com o software:
 
-Em seguida o aluno deve caminhar a contextualização para descrever o **problema** que o artigo trata. 
-O **problema** pode ser algo vivido em uma empresa específica. Neste caso, o aluno deve rapidamente apresentar 
-o cenário de problema da empresa. A empresa só deve ser citada explicitamente se o aluno tiver autorização 
-para tal.
+- não é possível localizar um cliente no sistema por meio de busca pela sua cidade (principal foco);
+- o visual do software, que poderia ser mais atrativo;
+- a necessidade de sincronizar aparelhos toda vez que o software é utilizado em outro dispositivo;
+- a falta da opção de preenchimento de formulário para pedidos de exames.
+
 
     1.3 Objetivo geral
+O objetivo principal a ser alcançado nesse trabalho é desenvolver um sistema para auxiliar nosso cliente a gerenciar com mais eficácia o consultório. Este sistema deve possuir tudo o que ele precisa para que isso seja possível e deve sanar as insatisfações apresentadas.
 
-O aluno deve escrever um pequeno parágrafo ou frase com o **objetivo geral** do trabalho. 
-O objetivo deve ser bem direto, específico e definido com verbos de ação (elaborar, propor, avaliar, comparar etc.).
+
 
         1.3.1 Objetivos específicos
+ Os objetivos específicos deste trabalho são:
+- Analisar o sistema atual (Hi Doctor) utilizado pelo médico.
+- Identificar no sistema quais funcionalidades são utilizadas pelo médico e quais podem ser descartadas.
+- Identificar as insatisfações do médico com o sistema.
 
-Apresente também alguns (pelo menos 2) **objetivos específicos** dependendo de onde você vai querer 
-concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
+
 
     1.4 Justificativas
+    
+O Dr.Rosalvo é o único médico do consultório e utiliza um sistema generalizado para qualquer área da saúde. A partir disso, surgiu a demanda de um sistema mais específico e moderno que possua todas as funcionalidades que ele e a secretária precisam para gerenciar os pacientes do consultório e o agendamento das consultas. 
 
-Mostre também as **justificativas** para o 
-desenvolvimento do seu trabalho e, caso deseje, destaque alguma contribuição do trabalho.
 
 
 ## 2. Stakeholders
 
-Apresentar os stakeholders (partes interessadas) do projeto. A descrição das partes interessadas pode ser 
-feita por meio de personas, caracterização de usuários, clientes, parceiros. Devem ser incluídas informações 
-que mostrem as motivações e expectativas destas partes interessadas.
+O projeto possui dois stakeholders que são os únicos usuários do sistema: o médico(Dr.Rosalvo) e a secretária. Tanto o médico quanto a secretária desejam um sistema mais eficiente que atenda às necessidades específicas de cada um. 
+Ambos desejam um software com visual mais atrativo e no qual seja possível localizar um cliente por meio de uma busca pela cidade.
+Para o médico, seria ideal um sistema que possibilite a criação de pedidos de exames e que não seja necessário sincronizar manualmente a cada uso em diferentes dispositivos.
 
 
 ## 3. Proposta da solução
 
-Deve ser apresentado o escopo da solução proposta. O escopo pode ser descrito por meio de histórias de usuário, 
-requisitos do produto, ou necessidades gerais dos envolvidos.
+Pretendemos criar uma aplicação web sincronizada com um banco de dados em nuvem que, além de apresentar algumas das funcionalidades já existentes no "Hi Doctor", consiga sanar as insatisfações apresentadas pelo cliente, citadas no tópico "Problema". O sistema deve possuir cadastro de clientes, agenda e calendário, prontuário médico e prescrição eletrônica.
+
+Requisitos funcionais do sistema:
+
+-   Cada usuário deverá possuir seu login e senha	
+-	Os dois usuários poderão cadastrar pacientes	
+-	Os dois usuários poderão marcar consultas na agenda do sistema	
+-	Os dois usuários deverão ter acesso à lista de pacientes	
+-	Os dois usuários deverão conseguir localizar pacientes por meio de busca por nome, sobrenome, cidade, telefone, entre outros.	
+-	O médico deverá cadastrar prontuários de pacientes	
+-	Os dois usuários deverão ter acesso ao perfil de cada paciente com seus dados pessoais	
+-	O médico deverá cadastrar pedidos de exame	
+-	Os dois usuários deverão ter acesso à uma agenda, com todas as consultas em suas respectivas datas e horários	
+-	Os dois usuários poderão excluir cadastros de pacientes	
+-	Os dois usuários poderão desmarcar consultas na agenda do sistema	
+-	Os dois usuários poderão remarcar consultas na agenda do sistema	
+-	O médico poderá modificar prontuários já cadastrados	
+-	O médico deverá ter acesso ao prontuário de cada paciente
+
 
 
 ## 4. Projeto da Solução
 
-Deve ser apresentada a descrição técnica da solução proposta. Devem ser incluídas informações que 
-permitam caracterizar a arquitetura do software, seus componentes arquiteturais, 
-tecnologias envolvidas, frameworks utilizados, etc.
+Na criação deste software foram utilizadas as seguintes tecnologias: 
+- linguagem de marcação HTML e CSS; 
+- a linguagem de programação Java Script; 
+- a ferramenta node.js; 
+- o framework bootstrap; 
+- quanto ao banco de dados optamos por utilizar o MySql;
+- para elaboração dos diagramas de caso de uso e de classe, utilizamos a ferramenta astah;
+- para elaboração do diagrama de banco de dados, utilizamos a ferramenta draw.io;
+- para elaboração dos wireframes, utilizamos a ferramenta figma;
+- para repositório de código, documentação e planejamento das sprints utilizamos a ferramenta github.
+
+Diagrama de casos de uso:
+![Diagrama de caso de uso](https://user-images.githubusercontent.com/69217117/120393618-9876a880-c308-11eb-867f-9a3b7314b275.png)
+
 
 ## 5. Artefatos principais
 
-Devem ser apresentados os artefatos criados para a solução do problema 
-(ex. software, protótipos, especificações de requisitos, modelagem de processos, 
-documentos arquiteturais, etc). Os artefatos não devem ser apresentados na íntegra, 
-mas o texto deve apresentar o que foi feito como solução para o problema apresentado.
+Os artefatos criados para a solução do problema foram: 
+- atas de reunião com o cliente e com equipe, descrevem o que foi decidido e discutido em cada reunião; 
+- documento de visão que contém os requisitos funcionais e não funcionais;
+- diagrama de banco de dados, representa a estrutura dos dados da aplicação a serem guardados no banco de dados;
+- layoutes do sistema, que serve como um guia para desenvolvimento das telas e para validação com o cliente antes do desenvolvimento do sistema;
+- descrição de cada interface, descreve o relacionamento da interface com outras, cada campo dessa interface e seus comandos;
+- diagrama de classes, que é uma representação da estrutura das classes e suas relações para servir de modelo na programação orientada a objetos;
+- diagrama de casos de uso, que descreve as principais funcionalidades do sistema e a interação dessas funcionalidades com os usuários;
+- descrição dos casos de uso, no qual apresentamos para cada caso de uso sua descrição, seus atores, suas pré-condições, seu fluxo principal e seus fluxos alternativos;
+
+Interface da home:
+![Home](https://user-images.githubusercontent.com/69217117/120395652-b8f43200-c30b-11eb-899a-b723916f94f5.png)
+
+Interface da tela de agendamento:
+![Tela da agenda](https://user-images.githubusercontent.com/69217117/120395659-bb568c00-c30b-11eb-83a2-b66a5f6ee29b.jpg)
+
+Interface da tela de cadastro de novo paciente:
+![Formulario cadastro paciente](https://user-images.githubusercontent.com/69217117/120395944-3750d400-c30c-11eb-8b93-2f3675d2456c.jpg)
+
+
+Diagrama de classes:
+![Diagrama de classes](https://user-images.githubusercontent.com/69217117/120394229-83e6e000-c309-11eb-9ca0-388dbdecb498.png)
+
 
 ## 6. Conclusão
 
-Devem ser apresentadas as conclusões do trabalho, resgatando os objetivos e 
-apresentando os principais resultados, contribuições e lições aprendidas.
+   Concluímos que para alcançarmos o objetivo inicial, o grupo teve que buscar conhecimento de formas alternativas. Uma das formas foi por meio de um curso de node.js disponibilizado pela plataforma udemy que nos auxiliou principalmente na parte do back-end.
+O cliente, ciente que estamos em constante aprendizado, ficou bem satisfeito com o resultado alcançado.
+
+O objetivo inicial era o desenvolvimento de um sistema que auxiliasse o cliente e a secretária com o gerenciamento eficaz das consultas e dos pacientes do consultório. Foi solicitado que o software possuísse algumas funcionalidades do sistema anterior, além de algumas mudanças.
+As funcionalidades que foram requisitadas pelo cliente foram desenvolvidas da melhor forma possível (e conseguimos efetivamente solucionar os problemas apontados dentro da capacidade de cada um). 
+
+O trabalho foi uma oportunidade de crescimento tanto pessoal quanto para trabalho em equipe. Nesse projeto, aplicamos o que vimos na teoria em outras matérias do curso, como por exemplo: engenharia de requisitos, banco de dados, desenvolvimento de interfaces web, entre outras. Além de correlacionar o conhecimento adquirido com  a nossa solução, conseguimos aplicar a divisão de tarefas, de responsabilidade com entregas, lidamos com problemas e além disso, adquirimos muito conhecimento técnico.
+
+
 
 # REFERÊNCIAS
-
-Como um projeto de software não requer revisão bibliográfica, a inclusão das referências não é obrigatória. No entanto, caso você deseje incluir referências relacionadas às tecnologias, padrões, ou metodologias que foram usadas no seu trabalho, relacione-as de acordo com a ABNT.
-
-Verifique no link abaixo como devem ser as referências no padrão ABNT:
-
-http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
-
-
-**[1.1]** - _ELMASRI, Ramez; NAVATHE, Sham. **Sistemas de banco de dados**. 7. ed. São Paulo: Pearson, c2019. E-book. ISBN 9788543025001._
-
-**[1.2]** - _COPPIN, Ben. **Inteligência artificial**. Rio de Janeiro, RJ: LTC, c2010. E-book. ISBN 978-85-216-2936-8._
-
-**[1.3]** - _CORMEN, Thomas H. et al. **Algoritmos: teoria e prática**. Rio de Janeiro, RJ: Elsevier, Campus, c2012. xvi, 926 p. ISBN 9788535236996._
-
-**[1.4]** - _SUTHERLAND, Jeffrey Victor. **Scrum: a arte de fazer o dobro do trabalho na metade do tempo**. 2. ed. rev. São Paulo, SP: Leya, 2016. 236, [4] p. ISBN 9788544104514._
-
-**[1.5]** - _RUSSELL, Stuart J.; NORVIG, Peter. **Inteligência artificial**. Rio de Janeiro: Elsevier, c2013. xxi, 988 p. ISBN 9788535237016._
 
 
 
@@ -112,7 +151,7 @@ http://www.pucminas.br/imagedb/documento/DOC\_DSC\_NOME\_ARQUI20160217102425.pdf
 
 **Colocar link:**
 
-Do repositório no github;
+Do repositório no github: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti3-6653100-agendamento-de-consultas-medicas;
 
 Do vídeo de apresentação.
 
