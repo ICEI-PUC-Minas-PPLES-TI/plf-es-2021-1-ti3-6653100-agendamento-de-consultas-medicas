@@ -18,7 +18,7 @@ _Instituto de Informática e Ciências Exatas – Pontifícia Universidade Cató
 ---
 
 _**Resumo**. 
-    O trabalho, referente a matéria TI-3: aplicações em cenários reais, tem como objetivo criar uma aplicação para o agendamento e gerenciamento de consultas médicas e de pacientes de um consultório de endocrinologia. O grupo, em reunião com o cliente Dr.Rosalvo, conseguiu identificar todas as suas satisfações e insatisfações com o sistema utilizado atualmente no consultório. A partir disso, as insatisfações do cliente com relação a presença de uma funcionalidade no sistema para a criação de pedidos de exame foram sanadas. 
+    O trabalho, referente a matéria TI-3: aplicações em cenários reais, tem como objetivo criar uma aplicação para o agendamento e gerenciamento de consultas médicas e de pacientes de um consultório de endocrinologia. O grupo, em reunião com o cliente Dr.Rosalvo, conseguiu identificar todas as suas satisfações e insatisfações com o sistema utilizado atualmente no consultório. A partir disso, pretendemos cumprir com essas exigências apresentadas pelo cliente com a nossa solução. Uma insatisfação que já conseguimos sanar foi em relação à presença de uma funcionalidade no sistema para a criação de pedidos de exame. 
 
 ---
 
@@ -33,7 +33,7 @@ Este trabalho consiste na criação de um sistema de agendamento e gerenciamento
     1.2 Problema
 O Consultório de Endocrinologia do dr. Rosalvo Reis atualmente utiliza o software "Hi Doctor" para a sua organização. O sistema fornece agenda, prontuário médico, prescrição eletrônica, entre outras funcionalidades. Entretanto, foram declaradas as seguintes insatisfações com o software:
 
-- não é possível localizar um cliente no sistema por meio de busca pela sua cidade (principal foco);
+- não é possível localizar um cliente no sistema por meio de busca pela sua cidade;
 - o visual do software, que poderia ser mais atrativo;
 - a necessidade de sincronizar aparelhos toda vez que o software é utilizado em outro dispositivo;
 - a falta da opção de preenchimento de formulário para pedidos de exames.
@@ -111,7 +111,7 @@ Os artefatos criados para a solução do problema foram:
 - atas de reunião com o cliente e com equipe, descrevem o que foi decidido e discutido em cada reunião; 
 - documento de visão que contém os requisitos funcionais e não funcionais;
 - diagrama de banco de dados, representa a estrutura dos dados da aplicação a serem guardados no banco de dados;
-- layoutes do sistema, que serve como um guia para desenvolvimento das telas e para validação com o cliente antes do desenvolvimento do sistema;
+- layoutes do sistema, que servem como um guia para desenvolvimento das telas e para validação com o cliente antes do desenvolvimento do sistema;
 - descrição de cada interface, descreve o relacionamento da interface com outras, cada campo dessa interface e seus comandos;
 - diagrama de classes, que é uma representação da estrutura das classes e suas relações para servir de modelo na programação orientada a objetos;
 - diagrama de casos de uso, que descreve as principais funcionalidades do sistema e a interação dessas funcionalidades com os usuários;
@@ -145,7 +145,11 @@ O trabalho foi uma oportunidade de crescimento tanto pessoal quanto para trabalh
 
 # REFERÊNCIAS
 
+https://www.hidoctor.com.br/?pk_campaign=msSearchLeads&msclkid=fc43bf3f2cf51e6c4276df098a7fe8fb
 
+https://www.crmmg.org.br/
+
+https://portal.cfm.org.br/
 
 # APÊNDICES
 
