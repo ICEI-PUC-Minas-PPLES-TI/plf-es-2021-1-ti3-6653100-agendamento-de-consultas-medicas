@@ -102,6 +102,7 @@ Na criação deste software foram utilizadas as seguintes tecnologias:
 - para repositório de código, documentação e planejamento das sprints utilizamos a ferramenta github.
 
 Diagrama de casos de uso:
+
 ![Diagrama de caso de uso](https://user-images.githubusercontent.com/69217117/120393618-9876a880-c308-11eb-867f-9a3b7314b275.png)
 
 
