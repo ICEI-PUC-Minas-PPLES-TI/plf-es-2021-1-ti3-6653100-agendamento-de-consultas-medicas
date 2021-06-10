@@ -26,11 +26,10 @@ _**Resumo**.
 ## 1. Introdução
 
 
-    1.1 Contextualização
-Este trabalho consiste na criação de um sistema de agendamento e gerenciamento de consultas médicas e de pacientes do consultório de endocrinologia do Dr.Rosalvo. A solução é uma proposta de sistema para ser aplicada na área da saúde e segue a regulamentação do Conselho Regional de Medicina, restringindo alguns acessos que possuem dados confidenciais entre paciente e médico. 
+      1.1 Contextualização
+Este trabalho consiste no desenvolvimento de um sistema que auxilie o cliente a gerenciar com mais eficácia o consultório de endocrinologia. Este sistema deve possuir tudo o que ele precisa para que isso seja possível e deve sanar as insatisfações apresentadas.
 
-
-    1.2 Problema
+      1.2 Problema 
 O Consultório de Endocrinologia do dr. Rosalvo Reis atualmente utiliza o software "Hi Doctor" para a sua organização. O sistema fornece agenda, prontuário médico, prescrição eletrônica, entre outras funcionalidades. Entretanto, foram declaradas as seguintes insatisfações com o software:
 
 - não é possível localizar um cliente no sistema por meio de busca pela sua cidade;
@@ -38,22 +37,16 @@ O Consultório de Endocrinologia do dr. Rosalvo Reis atualmente utiliza o softwa
 - a necessidade de sincronizar aparelhos toda vez que o software é utilizado em outro dispositivo;
 - a falta da opção de preenchimento de formulário para pedidos de exames.
 
+      1.3 Objetivo geral
+O objetivo principal a ser alcançado nesse trabalho é criar um sistema de agendamento e gerenciamento de consultas médicas e de pacientes do consultório de endocrinologia do Dr.Rosalvo. A solução é uma proposta de sistema para ser aplicada na área da saúde e que possa restringir alguns acessos que possuem dados confidenciais entre paciente e médico. 
 
-    1.3 Objetivo geral
-O objetivo principal a ser alcançado nesse trabalho é desenvolver um sistema para auxiliar nosso cliente a gerenciar com mais eficácia o consultório. Este sistema deve possuir tudo o que ele precisa para que isso seja possível e deve sanar as insatisfações apresentadas.
-
-
-
-        1.3.1 Objetivos específicos
+      1.3.1 Objetivos específicos
  Os objetivos específicos deste trabalho são:
 - Analisar o sistema atual (Hi Doctor) utilizado pelo médico.
 - Identificar no sistema quais funcionalidades são utilizadas pelo médico e quais podem ser descartadas.
 - Identificar as insatisfações do médico com o sistema.
 
-
-
-    1.4 Justificativas
-    
+      1.4 Justificativas
 O Dr.Rosalvo é o único médico do consultório e utiliza um sistema generalizado para qualquer área da saúde. A partir disso, surgiu a demanda de um sistema mais específico e moderno que possua todas as funcionalidades que ele e a secretária precisam para gerenciar os pacientes do consultório e o agendamento das consultas. 
 
 
@@ -68,6 +61,8 @@ Para o médico, seria ideal um sistema que possibilite a criação de pedidos de
 ## 3. Proposta da solução
 
 Pretendemos criar uma aplicação web sincronizada com um banco de dados em nuvem que, além de apresentar algumas das funcionalidades já existentes no "Hi Doctor", consiga sanar as insatisfações apresentadas pelo cliente, citadas no tópico "Problema". O sistema deve possuir cadastro de clientes, agenda e calendário, prontuário médico e prescrição eletrônica.
+
+A técnica de elicitação utilizada para desenvolver o sistema foi por meio da entrevista com o cliente, na qual debatemos sobre as preferências e as insatisfações com o software atual utilizado.
 
 Requisitos funcionais do sistema:
 
@@ -86,7 +81,12 @@ Requisitos funcionais do sistema:
 -	O médico poderá modificar prontuários já cadastrados	
 -	O médico deverá ter acesso ao prontuário de cada paciente
 
+Requisitos não-funcionais do sistema:
 
+- O sistema deverá ser integrado com banco de dados em nuvem para garantir sincronização automática dos dados
+- O sistema deve suportar dois usuários logados simultâneamente
+- O sistema deve atualizar a lista de pacientes após um cadastro em, no máximo, dois segundos
+- Para cadastrar um cliente deve-se gastar no máximo 3 cliques
 
 ## 4. Projeto da Solução
 
@@ -118,39 +118,42 @@ Os artefatos criados para a solução do problema foram:
 - diagrama de casos de uso, que descreve as principais funcionalidades do sistema e a interação dessas funcionalidades com os usuários;
 - descrição dos casos de uso, no qual apresentamos para cada caso de uso sua descrição, seus atores, suas pré-condições, seu fluxo principal e seus fluxos alternativos;
 
-Interface da home:
-![Home](https://user-images.githubusercontent.com/69217117/120395652-b8f43200-c30b-11eb-899a-b723916f94f5.png)
-
-Interface da tela de agendamento:
-![Tela da agenda](https://user-images.githubusercontent.com/69217117/120395659-bb568c00-c30b-11eb-83a2-b66a5f6ee29b.jpg)
-
-Interface da tela de cadastro de novo paciente:
-![Formulario cadastro paciente](https://user-images.githubusercontent.com/69217117/120395944-3750d400-c30c-11eb-8b93-2f3675d2456c.jpg)
+#### Interface da home que é exibida após o login do usuário:
+![Tela home](https://user-images.githubusercontent.com/69217117/121605206-6230db80-ca22-11eb-9820-6542f8c47253.jpeg)
 
 
-Diagrama de classes:
+#### Interface que apresenta o sistema o agendamento online com calendário para marcar as consultas dos pacientes: 
+![Tela Agendamento](https://user-images.githubusercontent.com/69217117/121605266-7bd22300-ca22-11eb-8d2f-0ebf130d93fc.jpeg)
+
+
+#### Interface que apresenta todos os dados necessários para cadastrar um novo paciente:
+![Tela cadastro](https://user-images.githubusercontent.com/69217117/121605299-8b516c00-ca22-11eb-81b5-97a2d5144690.jpeg)
+
+
+#### Diagrama de classes:
 ![Diagrama de classes](https://user-images.githubusercontent.com/69217117/120394229-83e6e000-c309-11eb-9ca0-388dbdecb498.png)
 
 
 ## 6. Conclusão
 
    Concluímos que para alcançarmos o objetivo inicial, o grupo teve que buscar conhecimento de formas alternativas. Uma das formas foi por meio de um curso de node.js disponibilizado pela plataforma udemy que nos auxiliou principalmente na parte do back-end.
-O cliente, ciente que estamos em constante aprendizado, ficou bem satisfeito com o resultado alcançado.
 
-O objetivo inicial era o desenvolvimento de um sistema que auxiliasse o cliente e a secretária com o gerenciamento eficaz das consultas e dos pacientes do consultório. Foi solicitado que o software possuísse algumas funcionalidades do sistema anterior, além de algumas mudanças.
-As funcionalidades que foram requisitadas pelo cliente foram desenvolvidas da melhor forma possível (e conseguimos efetivamente solucionar os problemas apontados dentro da capacidade de cada um). 
+O objetivo inicial era o desenvolvimento de um sistema que auxiliasse o cliente e a secretária com o gerenciamento eficaz das consultas e dos pacientes do consultório. Foi solicitado que o software possuísse algumas funcionalidades do sistema anterior, além de algumas mudanças. 
+(e conseguimos efetivamente solucionar os problemas apontados dentro da capacidade de cada um). 
 
-O trabalho foi uma oportunidade de crescimento tanto pessoal quanto para trabalho em equipe. Nesse projeto, aplicamos o que vimos na teoria em outras matérias do curso, como por exemplo: engenharia de requisitos, banco de dados, desenvolvimento de interfaces web, entre outras. Além de correlacionar o conhecimento adquirido com  a nossa solução, conseguimos aplicar a divisão de tarefas, de responsabilidade com entregas, lidamos com problemas e além disso, adquirimos muito conhecimento técnico.
+O Dr.Rosalvo, ciente que estamos em constante aprendizado, aprovou o software desenvolvido pelo grupo e se mostrou bem satisfeito com o resultado alcançado. Também ressaltou que as mudanças que foram solicitadas para o novo sistema foram resolvidas da melhor forma possível.
+
+O trabalho foi uma oportunidade de crescimento tanto pessoal quanto para trabalho em equipe. Nesse projeto, aplicamos o que vimos na teoria em outras matérias do curso, como por exemplo: engenharia de requisitos, banco de dados, desenvolvimento de interfaces web, entre outras. Além de correlacionar o conhecimento adquirido com a nossa solução, conseguimos aplicar a divisão de tarefas, de responsabilidade com entregas, lidamos com problemas e além disso, adquirimos conhecimento técnico.
 
 
 
 # REFERÊNCIAS
 
-https://www.hidoctor.com.br/?pk_campaign=msSearchLeads&msclkid=fc43bf3f2cf51e6c4276df098a7fe8fb
+HIDOCTOR. Software Médico para Clínicas e Consultórios Médicos - HiDoctor, 2021. Disponível em: https://www.hidoctor.com.br/?pk_campaign=msSearchLeads&msclkid=fc43bf3f2cf51e6c4276df098a7fe8fb. Acesso em: 26,mar.2021.
 
-https://www.crmmg.org.br/
+CRMMG. Conselho Regional de Medicina de Minas Gerais - CRMMG, 2021. Disponível em: https://www.crmmg.org.br/. Acesso em: 05,mai.2021.
 
-https://portal.cfm.org.br/
+CFM. Conselho Federal de Medicina - CFM, 2021. Disponível em: https://portal.cfm.org.br/. Acesso em: 15,abr.2021.
 
 # APÊNDICES
 
