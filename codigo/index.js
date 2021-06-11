@@ -46,6 +46,10 @@ app.get("/", (req, res) => {
     res.render("index")
 })
 
+app.get("/home", userAuth, (req, res) => {
+    res.render("home2")
+})
+
 app.set('view engine', 'ejs')
 app.use(express.static('public'))
 
