@@ -15,6 +15,7 @@ const Consulta = require("./database/consultas");
 const Anamnese = require("./database/anamneses");
 const Exame = require("./database/exames");
 const Receita = require("./database/receitas");
+const { query } = require("express")
 
 const userAuth = require("./middlewares/userAuthenticate")
 const medicoAuth = require("./middlewares/medicoAuthenticate")
@@ -94,6 +95,25 @@ app.post("/", (req, res) => {
 app.get("/logout", (req, res) => {
     req.session.user = undefined;
     res.redirect("/");
+})
+
+//busca
+
+async function search(query){
+    try{
+        var listPac = await Paciente.findOne({ where: { nome: query }})
+        return listPac
+    }catch(err){
+        console.log(err)
+        return []
+    }
+    
+    
+}
+
+app.get("/searchresult", async (req, res) => {
+    var paci = await search(req.query.search)
+    res.json(paci)
 })
 
 //gerenciando paciente
