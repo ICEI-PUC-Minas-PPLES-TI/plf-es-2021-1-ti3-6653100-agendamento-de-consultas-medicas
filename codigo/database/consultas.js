@@ -4,7 +4,7 @@ const Paciente = require("./pacientes");
 
 const Consulta = connection.define('consulta', {
     data:{
-        type: Sequelize.STRING,
+        type: Sequelize.DATE,
         allowNull: false
     },
     hora:{
