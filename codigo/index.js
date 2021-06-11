@@ -4,6 +4,7 @@ const app = express()
 const bcrypt = require('bcryptjs')
 const nodemailer = require("nodemailer")
 const crypto = require("crypto")
+var AppointmentFactory = require("./factories/AppointmentFactory");
 
 const bodyParser = require("body-parser"); //traduzir dados enviados em uma estrutura js
 const connection = require("./database/database");
@@ -39,7 +40,7 @@ app.use(express.static('public'))
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.listen(5000, () => {
+app.listen(5001, () => {
     console.log("Server is started")
 })
 
@@ -54,7 +55,7 @@ app.post("/", (req, res) => {
 
             var correct = bcrypt.compareSync(senha, usuario.senha)
 
-            if (senha == usuario.senha) {
+            if (correct) {
                 res.render("home", {
                     usuario: usuario
                 });
@@ -267,6 +268,35 @@ app.post("/pacientes/update", (req, res) => {
 
 app.get("/agenda", (req, res) => {
 
+    res.render("date");
+
+})
+
+app.get("/agenda2", (req, res) => {
+
+    Consulta.findAll({
+        include: [{//pega dados do relacionamento
+            model: Paciente,
+        }],
+        order: [
+            ['hora', 'DESC']
+        ] 
+    }).then(consultas => {
+
+        var appointments = [];
+
+        consultas.forEach(appointment => {
+            appointments.push( AppointmentFactory.Build(appointment))              
+        });
+
+        res.json(appointments);
+        
+    });
+
+})
+
+app.get("/novaConsulta", (req, res) => {
+
     let date = new Date();
 
     let day = date.getDate();
@@ -282,7 +312,7 @@ app.get("/agenda", (req, res) => {
 	let year = date.getFullYear();
 
 	let data = new String;
-    data = day + '/' + month + '/' + year ;
+    data = year + '-' + month + '-' + day ;
 
     Consulta.findAll({
         where: {
@@ -296,7 +326,7 @@ app.get("/agenda", (req, res) => {
         ] 
     }).then(consultas => {
         Paciente.findAll().then(pacientes => {
-            res.render("date", { consultas: consultas, pacientes: pacientes });
+            res.render("novaConsulta", { consultas: consultas, pacientes: pacientes });
         })
     });
 
@@ -537,7 +567,7 @@ app.post("/recuperarSenha", (req, res) => {
         return res.status(404).json({message : 'User not found'})
     }
     
-    });
+});
 
 //Dados
 
