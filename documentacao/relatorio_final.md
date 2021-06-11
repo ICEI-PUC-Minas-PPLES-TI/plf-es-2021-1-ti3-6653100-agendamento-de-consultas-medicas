@@ -122,7 +122,7 @@ Os artefatos criados para a solução do problema foram:
 ![Tela home](https://user-images.githubusercontent.com/69217117/121605206-6230db80-ca22-11eb-9820-6542f8c47253.jpeg)
 
 
-#### Interface que apresenta o sistema o agendamento online com calendário para marcar as consultas dos pacientes: 
+#### Interface que apresenta o calendário que exibe as consultas dos pacientes: 
 ![Tela agenda](https://user-images.githubusercontent.com/69217117/121682242-377e6b80-ca92-11eb-8848-95fe2273755c.jpeg)
 
 
