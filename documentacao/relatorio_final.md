@@ -123,11 +123,11 @@ Os artefatos criados para a solução do problema foram:
 
 
 #### Interface que apresenta o sistema o agendamento online com calendário para marcar as consultas dos pacientes: 
-![Tela Agendamento](https://user-images.githubusercontent.com/69217117/121605266-7bd22300-ca22-11eb-8d2f-0ebf130d93fc.jpeg)
+![Tela agenda](https://user-images.githubusercontent.com/69217117/121682242-377e6b80-ca92-11eb-8848-95fe2273755c.jpeg)
 
 
 #### Interface que apresenta todos os dados necessários para cadastrar um novo paciente:
-![Tela cadastro](https://user-images.githubusercontent.com/69217117/121605299-8b516c00-ca22-11eb-81b5-97a2d5144690.jpeg)
+![Tela cadastro](https://user-images.githubusercontent.com/69217117/121682289-48c77800-ca92-11eb-957e-14e49ef659b1.jpeg)
 
 
 #### Diagrama de classes:
