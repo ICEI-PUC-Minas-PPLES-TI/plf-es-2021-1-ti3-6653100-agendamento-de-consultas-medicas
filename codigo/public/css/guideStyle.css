@@ -350,52 +350,61 @@
 .text-box{
 	font-size: large;
 }
+
+.DataConsulta{
+    position: absolute;
+    width: 500px;
+	margin-top: 2%;
+	left: 16.4%;
+}
+
 .hora{
-	position: fixed;
-	margin-top: 13.5%;
-	left: 59%;
+	position: absolute;
+	margin-top: 5%;
+	left: 16.4%;
 }
 .tipo{
-	position: fixed;
-	margin-top: 13.5%;
-	left: 66%;
+	position: absolute;
+	margin-top: 5%;
+	left: 23.6%;
 }
 .valor{
-	position: fixed;
-	margin-top: 13.5%;
-	left: 83.8%;
+	position: absolute;
+	margin-top: 5%;
+	left: 41.8%;
 }
 .nome{
-	position: fixed;
-	margin-top: 18.5%;
-	left: 59%;
+	position: absolute;
+	margin-top: 9.5%;
+	left: 16.4%;
 }
 .convenio{
-	position: fixed;
-	margin-top: 18.5%;
-	left: 83.8%;
-    width: 110px;
+	position: absolute;
+	margin-top: 9.5%;
+	left: 40.7%;
 }
 .status{
-	position: fixed;
-	margin-top: 23.5%;
-	left: 59%;
+	position: absolute;
+	margin-top: 14%;
+	left: 16.4%;
 }
 .chegada{
-	position: fixed;
-	margin-top: 23.5%;
-	left: 72.5%;
+	position: absolute;
+	margin-top: 14%;
+	left: 30.3%;
 }
 .atendido{
-	position: fixed;
-	margin-top: 23.5%;
-	left: 82.5%;
+	position: absolute;
+	margin-top: 14%;
+	left: 40.5%;
 }
 .notas{
-	position: fixed;
-	margin-top: 28.5%;
-	left: 59%;
+	position: absolute;
+	margin-top: 18.5%;
+	left: 16.4%;
 }
+
+
 .btn-create{
 	position: fixed;
 	margin-top: 35%;
@@ -509,102 +518,38 @@
 
 /* CALENDARIO*/
 
-.date-picker {
-	position: fixed;
-	width: 100%;
-	max-width: 235px;
-	height: 28px;
-	background-color:#75ddba;
-	margin: 36px auto;
-	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
-	left: 900px;
-	top: 88px;
-	cursor: pointer;
-	user-select: none;
+#calendar{
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.date-picker:hover {
-	background-color: #F3F3F3;
-}
-
-.date-picker .selected-date {
-	width: 100%;
-	height: 100%;
-
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	color: #020202; 
-	font-size: 20px;
-}
-
-.date-picker .dates {
-	position: absolute;
-	top: 100%; /*tira a parte onde mostra a data*/
-	right: 0;
-	left: 0;
-	background-color: #FFF;
-}
-
-.date-picker .dates.active {
-	display: block;
-}
-
-.date-picker .dates .month {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	border-bottom: 2px solid #EEE;
-}
-
-.date-picker .dates .month .arrows {
-	width: 35px;
-	height: 30px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #000000;
-	font-size: 20px;
-}
-
-.date-picker .dates .month .arrows:hover {
-	background-color: #F3F3F3;
-}
-
-.date-picker .dates .month .arrows:active {
-	background-color: #75ddba;
-}
-
-.date-picker .dates .days {
-	display: grid;
-	grid-template-columns: repeat(7, 1fr);
-	height: 120px;
-}
-.date-picker .dates .days .day { 
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #313131;
-}
-.date-picker .dates .days .day.selected {
-	background-color: #75ddba;
-}    
-
-.tables tr td a{
+.fc-col-header-cell-cushion{
+    color: black;
     text-decoration: none;
 }
 
-.tables tr td{
-    padding: 10px;
+.fc-daygrid-day-number{
+    color: black;
+    text-decoration: none;
 }
 
-.tables .top{
-    background-color: #75ddba;
+.fc-event-time{
+    color: black;
+    font-size: small;
+}
+
+.fc-event-title{
+    color: black;
+    font-size: small;
 }
 
 .titulo-agendamento{
     margin-left: -550px;
+}
+
+.btn-NovaConsulta{
+    margin-left: 20px;
+    margin-bottom: -30px;
 }
 
 /*botão busca dos formulários*/
@@ -616,7 +561,7 @@
 .campo-nome{
     margin-top: 24px;
     float: left;
-    min-width: 370px;
+    min-width: 360px;
 }
 
 .btnBuscaNome{
