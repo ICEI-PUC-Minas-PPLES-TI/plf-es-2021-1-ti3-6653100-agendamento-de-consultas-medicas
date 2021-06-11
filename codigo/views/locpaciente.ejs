@@ -34,9 +34,9 @@
 
                         <div class="pesquisar">
 
-                            <form class="row g-3">
+                            <form class="row g-3" action="/searchresult" method="get">
                                 <div class="col-auto">
-                                    <input class="input-pesquisa form-control" placeholder="Digite sua pesquisa">
+                                    <input class="input-pesquisa form-control" type="search" name="search" placeholder="Digite sua pesquisa">
                                 </div>
                                 <div class="col-auto">
                                     <button type="submit" class="btn btn-success mb-3">Enviar</button>
@@ -47,6 +47,7 @@
                         <div class="resultado-pesquisa">
                             <ul>
                                 <% pacientes.forEach(paciente=> {%>
+
                                     <li>
                                         <br>
                                         <a class="opcao" href="/pacientes/perfil/<%= paciente.id %>">
@@ -56,6 +57,8 @@
                                     </li>
                                     <% }); %>
                             </ul>
+
+                            
                         </div>
                     </div>
                 </div>
