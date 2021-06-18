@@ -46,16 +46,16 @@
                         </div>
                         <div class="resultado-pesquisa">
                             <ul>
-                                <% pacientes.forEach(paciente=> {%>
+                                
 
                                     <li>
                                         <br>
-                                        <a class="opcao" href="/pacientes/perfil/<%= paciente.id %>">
-                                            <%= paciente.nome %>
+                                        <a class="opcao" href="/pacientes/perfil/<%= pacientes.id %>">
+                                            <%= pacientes.nome %>
                                         </a>
                                         <br>
                                     </li>
-                                    <% }); %>
+    
                             </ul>
 
                             
