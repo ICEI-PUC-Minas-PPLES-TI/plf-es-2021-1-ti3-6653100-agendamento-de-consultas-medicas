@@ -187,6 +187,12 @@ app.get("/pacientes", userAuth, (req, res) => {
 
 });
 
+app.get("/searchresult", async (req, res) => {
+    var pacientes = await search(req.query.search)
+    res.render("locpaciente", { pacientes: pacientes })
+})
+
+
 app.get("/pacientes/perfil/:id", userAuth, (req, res) => {
 
     var id = req.params.id;
