@@ -582,12 +582,6 @@
 }
 
 /*css anamneses*/
-.resizedTextbox{
-    position: relative;
-    top: 40px;
-    width: 830px; height: 200px
-}
-
 .anamneses{
     position: relative;
     top: 40px;
@@ -620,9 +614,4 @@
     top: 40px;
     width: 830px; height: 350px
 
-}
-
-.anamneses{
-    position: relative;
-    top: 40px;
 }
