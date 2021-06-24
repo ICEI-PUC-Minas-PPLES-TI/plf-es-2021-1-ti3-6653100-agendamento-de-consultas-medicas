@@ -44,11 +44,11 @@
                     </select>
                 </div>
                 <div class="tipo">
-                    <label>Tipo de Compromisso</label>
+                    <label>Tipo de compromisso</label>
                     <input class="form-control" type="text" name="tipo" size="23" />
                 </div>
                 <div class="nome">
-                    <label>Nome do Paciente</label>
+                    <label>Nome do paciente</label>
                     <select name="paciente" class="form-control campo-nome">
                         <% pacientes.forEach((paciente) => {%>
                             <option value="<%= paciente.id %>"><%= paciente.nome %></option>
