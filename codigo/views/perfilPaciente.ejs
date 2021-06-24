@@ -44,13 +44,13 @@
                                     </label>
                                 </div>
                                 <div class="col-4">
-                                    <label for="DataCadastro ">Data de Cadastro</label>
+                                    <label for="DataCadastro ">Data de cadastro</label>
                                     <label class="form-control">
                                         <%=paciente.dataCadastro%>
                                     </label>
                                 </div>
                                 <div class="col-4 ">
-                                    <label for="Nascimento ">Data de Nascimento</label>
+                                    <label for="Nascimento ">Data de nascimento</label>
                                     <label class="form-control">
                                         <%=paciente.nascimento%>
                                     </label>
@@ -82,7 +82,7 @@
 
 
                         <div class="col-4 ">
-                            <label for="inputState ">Estado Civil</label>
+                            <label for="inputState ">Estado civil</label>
                             <label class="form-control">
                                 <%=paciente.estadoCivil%>
                             </label>
@@ -237,7 +237,7 @@
     function confirmarDelecao(event, form) {
         event.preventDefault();
 
-        var decision = confirm("Você quer deletar este paciente?");
+        var decision = confirm("Deseja deletar este paciente?");
 
         if (decision) {
             form.submit();
