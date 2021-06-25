@@ -138,8 +138,7 @@ Os artefatos criados para a solução do problema foram:
 
    Concluímos que para alcançarmos o objetivo inicial, o grupo teve que buscar conhecimento de formas alternativas. Uma das formas foi por meio de um curso de node.js disponibilizado pela plataforma udemy que nos auxiliou principalmente na parte do back-end.
 
-O objetivo inicial era o desenvolvimento de um sistema que auxiliasse o cliente e a secretária com o gerenciamento eficaz das consultas e dos pacientes do consultório. Foi solicitado que o software possuísse algumas funcionalidades do sistema anterior, além de algumas mudanças. 
-(e conseguimos efetivamente solucionar os problemas apontados dentro da capacidade de cada um). 
+O objetivo inicial era o desenvolvimento de um sistema que auxiliasse o cliente e a secretária com o gerenciamento eficaz das consultas e dos pacientes do consultório. Foi solicitado que o software possuísse algumas funcionalidades do sistema anterior, além de algumas mudanças e conseguimos efetivamente solucionar grande parte dos problemas apontados, dentro da capacidade de cada um. 
 
 O Dr.Rosalvo, ciente que estamos em constante aprendizado, aprovou o software desenvolvido pelo grupo e se mostrou bem satisfeito com o resultado alcançado. Também ressaltou que as mudanças que foram solicitadas para o novo sistema foram resolvidas da melhor forma possível.
 
