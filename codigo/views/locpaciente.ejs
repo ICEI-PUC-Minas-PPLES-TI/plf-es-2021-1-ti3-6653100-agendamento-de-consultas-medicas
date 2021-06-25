@@ -15,49 +15,80 @@
 
         <%- include ('partials/menuLateral.ejs'); %>
 
-            <div class="wrapper">
+            <div class="wrapper pesquisa2">
 
-                <div class="main_content">
-                    <div class="menu_select">
-                        <form action="">
-                            
-                        </form>
+                <br>
 
-                        <br>
+                <h3>Pacientes</h3>
 
-                        <div class="pesquisar">
+                <div class="pesquisaPacientes">
 
-                            <form class="row g-3" action="/searchresult" method="get">
-                                <div class="col-auto">
-                                    <input class="input-pesquisa form-control" type="search" name="search" placeholder="Digite sua pesquisa">
-                                </div>
-                                <div class="col-auto">
-                                    <button type="submit" class="btn btn-success mb-3">Enviar</button>
-                                </div>
-                            </form>
+                    <input id="txtBusca" class="input-pesquisa form-control" placeholder="Digite sua pesquisa">
 
-                        </div>
-                        <div class="resultado-pesquisa">
-                            <ul>
-                                
+                    <table class="table table-bordered tabelaPacientes">
+                        <thead>
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">E-mail</th>
+                                <th scope="col">Cpf</th>
+                                <th scope="col">Cidade</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <% pacientes.forEach(paciente=> {%>
+                                <tr>
+                                    <td><a id="nomePacBusc" href="/pacientes/perfil/<%= paciente.id %>">
+                                            <%= paciente.nome %>
+                                        </a></td>
+                                    <td>
+                                        <%= paciente.email %>
+                                    </td>
+                                    <td>
+                                        <%= paciente.cpf %>
+                                    </td>
+                                    <td>
+                                        <%= paciente.cidade %>
+                                    </td>
+                                </tr>
+                                <% }); %>
+                        </tbody>
+                    </table>
 
-                                    <li>
-                                        <br>
-                                        <a class="opcao" href="/pacientes/perfil/<%= pacientes.id %>">
-                                            <%= pacientes.nome %>
-                                        </a>
-                                        <br>
-                                    </li>
-    
-                            </ul>
-
-                            
-                        </div>
-                    </div>
                 </div>
 
             </div>
     </div>
+
+    <script>
+        var tbody = document.getElementById("tbody");
+        var tr = tbody.children;
+        console.log(tr);
+
+        document.getElementById("txtBusca").addEventListener("keyup", function () {
+            var busca = document.getElementById("txtBusca").value.toLowerCase();
+
+            for (var i = 0; i < tbody.children.length; i++) {
+                var achou = false;
+                var tr = tbody.children[i];
+                var td = tr.children;
+                console.log(td);
+
+                for (var j = 0; j < td.length; j++) {
+                    var value = td[j].innerText.toLowerCase();
+
+                    if (value.indexOf(busca) >= 0) {
+                        achou = true;
+                    }
+                }
+
+                if (achou == true) {
+                    tr.style.display = "table-row";
+                } else {
+                    tr.style.display = "none";
+                }
+            }
+        });
+    </script>
 
 </body>
 

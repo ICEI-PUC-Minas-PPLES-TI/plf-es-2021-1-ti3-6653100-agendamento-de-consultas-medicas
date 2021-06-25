@@ -42,7 +42,7 @@
                                             <br>
                                             <br>
                                             <% exames.forEach(exame => {%>
-                                                <label class="receitas" for="inputName"><%= exame.createdAt %></label>
+                                                <label id="dataCriacao" class="receitas" for="inputName">Data de criação: <%= exame.createdAt.getDate()%> / <%=exame.createdAt.getMonth() + 1 %> / <%=exame.createdAt.getFullYear()%>%></label>
                                                 
                                                 <textarea class="resizedTextbox" cols="30"><%= exame.texto %></textarea>
     
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="/exames/<%= paciente.id %>/novoExame" class="btn btn-novoProntuario btn-success" type="submit">Novo</a>
+                <a id="btnEditarPac" href="/exames/<%= paciente.id %>/novoExame" class="btn btn-novoProntuario btn-success" type="submit">Novo</a>
             </form>
         </div>
     </div>

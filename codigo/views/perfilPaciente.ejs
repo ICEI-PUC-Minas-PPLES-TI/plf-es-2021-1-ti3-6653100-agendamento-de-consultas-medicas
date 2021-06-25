@@ -206,11 +206,11 @@
 
                 </form>
 
-                <a href="/pacientes/perfil/edit/<%= paciente.id %>" class="btn btn-warning">Editar</a>
+                <a href="/pacientes/perfil/edit/<%= paciente.id %>" id="btnEditarPac" class="btn btn-success">Editar</a>
                 <form method="POST" action="/pacientes/delete" style="display: inline"
                     onsubmit="confirmarDelecao(event, this)">
                     <input type="hidden" name="id" value="<%= paciente.id%>">
-                    <button class="btn btn-danger">Deletar</button>
+                    <button id="btnExcluirPac" class="btn btn-success">Excluir</button>
                 </form>
 
                 <br>
