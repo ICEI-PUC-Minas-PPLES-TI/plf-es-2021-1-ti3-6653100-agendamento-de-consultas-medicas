@@ -111,11 +111,19 @@ async function search(query){
     
 }
 
-app.get("/searchresult", async (req, res) => {
-    var paci = await search(req.query.search)
-    res.json(paci)
-})
+app.get("/pacientes", (req, res) => {
+   
 
+    Paciente.findAll().then(paciente => {
+        res.render("locpaciente", { pacientes: paciente });
+    });
+
+});
+
+app.get("/searchresult", async (req, res) => {
+    var pacientes = await search(req.query.search)
+    res.render("locpaciente", { pacientes: pacientes })
+})
 //gerenciando paciente
 
 app.get("/novoPaciente", userAuth, (req, res) => {
