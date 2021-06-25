@@ -136,16 +136,6 @@
     top: 20px;
 }
   
-.resultado-pesquisa{
-    position: absolute;
-    padding: 400px;
-    top: 160px;
-    border-top: 1px solid #77E1BB;
-    border-bottom: 1px solid #77E1BB;
-    border-left: 1px solid #77E1BB;
-    border-right: 1px solid #77E1BB;
-}
-  
 .select{
     padding: 16px 368px;
     border: 1px solid black;
@@ -192,10 +182,6 @@
     width: 900px;
 }
 
-.input-pesquisa{
-    width: 413px;
-}
-
 .btn-enviar{
     width: 100px;
     height: 36px;
@@ -226,7 +212,7 @@
 .aside {
     display: flex;
     grid-area: AS;
-    border-right: 1px solid #77E1BB;
+    border-right: 1px solid black;
     min-height: 100%;
 }
 
@@ -241,26 +227,30 @@
 
 .dropdown-menu.show{
     padding: 0px;
-    max-width: 120px;
-    min-width: 120px;
+    max-width: 150px;
+    min-width: 150px;
 }
 
 .aside .menu ul a {
     color: black;
     display: flex;
     margin-top: 28px;
-    margin-left: 10px;
-    width: 100px;
+    margin-left: -10px;
+    width: 150px;
     padding: 5px;
     text-decoration: none;
+    text-align: center;
+    justify-content: center;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .dropdown-item{
     color: black;
     margin-top: 0px !important;
-    margin-left: 15px;
-    padding: 5px;
-    text-decoration: none;
+    margin-left: 0px !important;
+    text-decoration: none !important;
+    border-style: none !important;
 }
 
 .aside .menu ul a:hover {
@@ -614,4 +604,47 @@
     top: 40px;
     width: 830px; height: 350px
 
+}
+
+/*tabela busca*/
+.input-pesquisa{
+    margin-top: -20px;
+    margin-bottom: 20px;
+    width: 1000px;
+}
+
+.pesquisa2 h3{
+    margin-top: -20px;
+    margin-left: -570px;
+}
+
+.pesquisaPacientes{
+    position: absolute;
+    top: 160px;
+    left: 230px;
+}
+
+#nomePacBusc{
+    text-decoration: none;
+    color: #000000;
+}
+
+#btnEditarPac{
+    margin-left: -20px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+#btnExcluirPac{
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.btnSalvarPac{
+    margin-top: 20px;
+    margin-bottom: 40px
+}
+
+#dataCriacao{
+    display: block;
 }
