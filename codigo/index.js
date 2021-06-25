@@ -4,6 +4,7 @@ const app = express()
 const bcrypt = require('bcryptjs')
 const nodemailer = require("nodemailer")
 const crypto = require("crypto")
+const session = require("express-session")
 var AppointmentFactory = require("./factories/AppointmentFactory");
 
 const bodyParser = require("body-parser"); //traduzir dados enviados em uma estrutura js
@@ -15,6 +16,17 @@ const Anamnese = require("./database/anamneses");
 const Exame = require("./database/exames");
 const Receita = require("./database/receitas");
 const { query } = require("express")
+
+const userAuth = require("./middlewares/userAuthenticate")
+const medicoAuth = require("./middlewares/medicoAuthenticate")
+
+//configurando sessoes
+
+app.use(session({
+    secret: "admin12345", cookie: {maxAge: 36000000} //tempo que usuario pode ficar logado
+}))
+
+//fin sessoes
 
 app.use(cors())
 
@@ -33,6 +45,10 @@ connection
 
 app.get("/", (req, res) => {
     res.render("index")
+})
+
+app.get("/home", userAuth, (req, res) => {
+    res.render("home2")
 })
 
 app.set('view engine', 'ejs')
@@ -57,6 +73,10 @@ app.post("/", (req, res) => {
             var correct = bcrypt.compareSync(senha, usuario.senha)
 
             if (correct) {
+                req.session.usuario = {
+                    id: usuario.id,
+                    email: usuario.email
+                }
                 res.render("home", {
                     usuario: usuario
                 });
@@ -72,13 +92,37 @@ app.post("/", (req, res) => {
 
 })
 
+app.get("/logout", (req, res) => {
+    req.session.user = undefined;
+    res.redirect("/");
+})
+
+//busca
+
+async function search(query){
+    try{
+        var listPac = await Paciente.findOne({ where: { nome: query }})
+        return listPac
+    }catch(err){
+        console.log(err)
+        return []
+    }
+    
+    
+}
+
+app.get("/searchresult", async (req, res) => {
+    var paci = await search(req.query.search)
+    res.json(paci)
+})
+
 //gerenciando paciente
 
-app.get("/novoPaciente", (req, res) => {
+app.get("/novoPaciente", userAuth, (req, res) => {
     res.render("cadastro")
 })
 
-app.post("/salvarPaciente", (req, res) => {
+app.post("/salvarPaciente", userAuth, (req, res) => {
 
     var nome = req.body.nome;
     var prontuario = req.body.prontuario;
@@ -135,35 +179,15 @@ app.post("/salvarPaciente", (req, res) => {
     }
 })
 
-async function search(query){
-    try{
-        var listPac = await Paciente.findOne({ where: { nome: query }})
-        return listPac
-    }catch(err){
-        console.log(err)
-        return []
-    }
-    
-    
-}
+app.get("/pacientes", userAuth, (req, res) => {
 
-app.get("/pacientes", (req, res) => {
-   
-
-    Paciente.findAll().then(paciente => {
-        res.render("locpaciente", { pacientes: paciente });
+    Paciente.findAll().then(pacientes => {
+        res.render("locpaciente", { pacientes: pacientes });
     });
 
 });
 
-app.get("/searchresult", async (req, res) => {
-    var pacientes = await search(req.query.search)
-    res.render("locpaciente", { pacientes: pacientes })
-})
-
-
-
-app.get("/pacientes/perfil/:id", (req, res) => {
+app.get("/pacientes/perfil/:id", userAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -184,7 +208,7 @@ app.get("/pacientes/perfil/:id", (req, res) => {
 
 });
 
-app.post("/pacientes/delete", (req, res) => {
+app.post("/pacientes/delete", userAuth, (req, res) => {
     var id = req.body.id;
 
     if (id != undefined) {
@@ -208,7 +232,7 @@ app.post("/pacientes/delete", (req, res) => {
     }
 });
 
-app.get("/pacientes/perfil/edit/:id", (req, res) => {
+app.get("/pacientes/perfil/edit/:id", userAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -230,7 +254,7 @@ app.get("/pacientes/perfil/edit/:id", (req, res) => {
 
 });
 
-app.post("/pacientes/update", (req, res) => {
+app.post("/pacientes/update", userAuth, (req, res) => {
     var id = req.body.id;
     var nome = req.body.nome;
     var prontuario = req.body.prontuario;
@@ -287,13 +311,13 @@ app.post("/pacientes/update", (req, res) => {
 
 //gerenciando consultas
 
-app.get("/agenda", (req, res) => {
+app.get("/agenda", userAuth, (req, res) => {
 
     res.render("date");
 
 })
 
-app.get("/agenda2", (req, res) => {
+app.get("/agenda2", userAuth, (req, res) => {
 
     Consulta.findAll({
         include: [{//pega dados do relacionamento
@@ -316,35 +340,12 @@ app.get("/agenda2", (req, res) => {
 
 })
 
-app.get("/novaConsulta", (req, res) => {
-
-    let date = new Date();
-
-    let day = date.getDate();
-	if (day < 10) {
-		day = '0' + day;
-	}
-
-	let month = date.getMonth() + 1;
-	if (month < 10) {
-		month = '0' + month;
-	}
-
-	let year = date.getFullYear();
-
-	let data = new String;
-    data = year + '-' + month + '-' + day ;
+app.get("/novaConsulta", userAuth, (req, res) => {
 
     Consulta.findAll({
-        where: {
-            data: data,
-        },
         include: [{//pega dados do relacionamento
             model: Paciente,
-        }],
-        order: [
-            ['hora', 'DESC']
-        ] 
+        }]
     }).then(consultas => {
         Paciente.findAll().then(pacientes => {
             res.render("novaConsulta", { consultas: consultas, pacientes: pacientes });
@@ -353,7 +354,7 @@ app.get("/novaConsulta", (req, res) => {
 
 })
 
-app.get("/agenda/:data", (req, res) => {
+app.get("/agenda/:data", userAuth, (req, res) => {
 
     var data = req.params.data;
 
@@ -367,7 +368,7 @@ app.get("/agenda/:data", (req, res) => {
 
 })
 
-app.post("/salvarConsulta", (req, res) => {
+app.post("/salvarConsulta", userAuth, (req, res) => {
 
     var data = req.body.data;
     var hora = req.body.hora;
@@ -404,7 +405,7 @@ app.post("/salvarConsulta", (req, res) => {
     }
 })
 
-app.get("/agenda/consulta/:id", (req, res) => {
+app.get("/agenda/consulta/:id", userAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -433,7 +434,7 @@ app.get("/agenda/consulta/:id", (req, res) => {
 
 });
 
-app.post("/agenda/consulta/delete", (req, res) => {
+app.post("/agenda/consulta/delete", userAuth, (req, res) => {
     var id = req.body.id;
 
     if (id != undefined) {
@@ -457,7 +458,7 @@ app.post("/agenda/consulta/delete", (req, res) => {
     }
 });
 
-app.get("/agenda/consulta/edit/:id", (req, res) => {
+app.get("/agenda/consulta/edit/:id", userAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -489,7 +490,8 @@ app.get("/agenda/consulta/edit/:id", (req, res) => {
 
 });
 
-app.post("/agenda/consulta/update", (req, res) => {
+app.post("/agenda/consulta/update", userAuth, (req, res) => {
+    var data = req.body.data;
     var id = req.body.id;
     var hora = req.body.hora;
     var tipo = req.body.tipo;
@@ -502,6 +504,7 @@ app.post("/agenda/consulta/update", (req, res) => {
     var paciente = req.body.paciente;
 
     Consulta.update({
+        data: data,
         hora: hora,
         tipo: tipo,
         convenio: convenio,
@@ -517,7 +520,7 @@ app.post("/agenda/consulta/update", (req, res) => {
         }
 
     }).then(() => {
-        res.redirect("/agenda/consulta/:id");
+        res.redirect("/agenda");
     });
 
 });
@@ -592,7 +595,7 @@ app.post("/recuperarSenha", (req, res) => {
 
 //Dados
 
-app.get("/receitas/:id", (req, res) => {
+app.get("/receitas/:id", userAuth, medicoAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -615,7 +618,7 @@ app.get("/receitas/:id", (req, res) => {
     
 });
 
-app.get("/anamneses/:id", (req, res) => {
+app.get("/anamneses/:id", userAuth, medicoAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -638,7 +641,7 @@ app.get("/anamneses/:id", (req, res) => {
 
 });
 
-app.get("/exames/:id", (req, res) => {
+app.get("/exames/:id", userAuth, medicoAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -660,7 +663,7 @@ app.get("/exames/:id", (req, res) => {
     });
 });
 
-app.get("/receitas/:id/novaReceita", (req, res) => {
+app.get("/receitas/:id/novaReceita", userAuth, medicoAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -681,7 +684,7 @@ app.get("/receitas/:id/novaReceita", (req, res) => {
     });
 })
 
-app.get("/anamneses/:id/novaAnamnese", (req, res) => {
+app.get("/anamneses/:id/novaAnamnese", userAuth, medicoAuth, (req, res) => {
     var id = req.params.id;
 
     Paciente.findOne({
@@ -701,7 +704,7 @@ app.get("/anamneses/:id/novaAnamnese", (req, res) => {
     });
 })
 
-app.get("/exames/:id/novoExame", (req, res) => {
+app.get("/exames/:id/novoExame", userAuth, medicoAuth, (req, res) => {
     var id = req.params.id;
 
     Paciente.findOne({
@@ -721,7 +724,7 @@ app.get("/exames/:id/novoExame", (req, res) => {
     });
 })
 
-app.post("/salvarReceita", (req, res) => {
+app.post("/salvarReceita", userAuth, medicoAuth, (req, res) => {
 
     var texto = req.body.texto;
     var paciente = req.body.paciente;
@@ -742,7 +745,7 @@ app.post("/salvarReceita", (req, res) => {
     }
 })
 
-app.get("/receitas/edit/:id", (req, res) => {
+app.get("/receitas/edit/:id", userAuth, medicoAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -765,7 +768,7 @@ app.get("/receitas/edit/:id", (req, res) => {
 
 });
 
-app.post("/receitas/update", (req, res) => {
+app.post("/receitas/update", userAuth, medicoAuth, (req, res) => {
 
     var id = req.body.id;
     var texto = req.body.texto;
@@ -785,7 +788,7 @@ app.post("/receitas/update", (req, res) => {
 
 });
 
-app.post("/receitas/delete", (req, res) => {
+app.post("/receitas/delete", userAuth, medicoAuth, (req, res) => {
 
     var id = req.body.id;
 
@@ -811,7 +814,7 @@ app.post("/receitas/delete", (req, res) => {
 });
 
 
-app.post("/salvarExame", (req, res) => {
+app.post("/salvarExame", userAuth, medicoAuth, (req, res) => {
 
     var texto = req.body.texto;
     var paciente = req.body.paciente;
@@ -832,7 +835,7 @@ app.post("/salvarExame", (req, res) => {
     }
 })
 
-app.get("/exames/edit/:id", (req, res) => {
+app.get("/exames/edit/:id", userAuth, medicoAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -855,7 +858,7 @@ app.get("/exames/edit/:id", (req, res) => {
 
 });
 
-app.post("/exames/update", (req, res) => {
+app.post("/exames/update", userAuth, medicoAuth, (req, res) => {
 
     var id = req.body.id;
     var texto = req.body.texto;
@@ -875,7 +878,7 @@ app.post("/exames/update", (req, res) => {
 
 });
 
-app.post("/exames/delete", (req, res) => {
+app.post("/exames/delete", userAuth, medicoAuth, (req, res) => {
 
     var id = req.body.id;
 
@@ -901,7 +904,7 @@ app.post("/exames/delete", (req, res) => {
 });
 
 
-app.post("/salvarAnamnese", (req, res) => {
+app.post("/salvarAnamnese", userAuth, medicoAuth, (req, res) => {
 
     var texto = req.body.texto;
     var paciente = req.body.paciente;
@@ -922,7 +925,7 @@ app.post("/salvarAnamnese", (req, res) => {
     }
 })
 
-app.get("/anamneses/edit/:id", (req, res) => {
+app.get("/anamneses/edit/:id", userAuth, medicoAuth, (req, res) => {
 
     var id = req.params.id;
 
@@ -945,7 +948,7 @@ app.get("/anamneses/edit/:id", (req, res) => {
 
 });
 
-app.post("/anamneses/update", (req, res) => {
+app.post("/anamneses/update", userAuth, medicoAuth, (req, res) => {
 
     var id = req.body.id;
     var texto = req.body.texto;
@@ -965,7 +968,7 @@ app.post("/anamneses/update", (req, res) => {
 
 });
 
-app.post("/anamneses/delete", (req, res) => {
+app.post("/anamneses/delete", userAuth, medicoAuth, (req, res) => {
 
     var id = req.body.id;
 
@@ -989,4 +992,3 @@ app.post("/anamneses/delete", (req, res) => {
         res.redirect("/anamneses/:pacienteId");
     }
 });
-
