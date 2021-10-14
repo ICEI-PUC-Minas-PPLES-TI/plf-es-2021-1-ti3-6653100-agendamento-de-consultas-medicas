@@ -1,0 +1,28 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Agendamento de Consultas Médicas
+authors:
+  - family-names: Pinheiro Matos
+    given-names: Isabel
+  - family-names: Martins Reis
+    given-names: Júlia
+  - family-names: Henrique de Jesus Ramos
+    given-names: Luiz
+  - family-names: Augusto Vieira de Almeida
+    given-names: Rafael
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Alonso Veloso
+    given-names: Eveline
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Bastos De Paula
+    given-names: Hugo
+keywords:
+  - Médico
+  - Consultas
+  - Agendamento
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2021-1-ti3-6653100-agendamento-de-consultas-medicas
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2021-06-20
